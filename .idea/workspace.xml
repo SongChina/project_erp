@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="a2094ad6-6898-4e96-ba0f-9d49bced08d4" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/src/main/java/com/cskaoyan/controller/DeviceListController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/cskaoyan/generator/Generator.java" afterDir="false" />
@@ -10,6 +11,11 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/mydb.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mydb.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/spring/applicationContext-general.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/applicationContext-general.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/spring/springmvc-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/springmvc-servlet.xml" afterDir="false" />
+=======
+    <list default="true" id="cbb65f63-51c2-47b8-8947-9c5b77541fcf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cskaoyan/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,10 +30,17 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
+<<<<<<< Updated upstream
         <entry file="file://$PROJECT_DIR$/src/main/resources/spring/springmvc-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="772">
               <caret line="45" selection-start-line="45" selection-end-line="45" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cskaoyan/controller/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -45,11 +58,11 @@
     <findStrings>
       <find>&gt;&gt;&gt;&gt;&gt;</find>
       <find>my</find>
-      <find>log</find>
       <find>mybatis.xml</find>
       <find>web</find>
       <find>.RequestMappingHandlerAdapter</find>
       <find>StaticLoggerBinder</find>
+      <find>log</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -60,14 +73,18 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/generator/Generator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cskaoyan/controller/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/cskaoyan/mapper/COrderMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/spring/springmvc-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mydb.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/spring/applicationContext-database.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/cskaoyan/membertest/TestBySong.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cskaoyan/mapper/CustomMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cskaoyan/mapper/DepartmentMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cskaoyan/mapper/DeviceCheckMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cskaoyan/mapper/DeviceFaultMapper.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cskaoyan/controller/Controller.java" />
       </list>
     </option>
   </component>
@@ -117,11 +134,17 @@
     <option name="jreName" value="1.8" />
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
+<<<<<<< Updated upstream
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="649" />
     <option name="y" value="22" />
     <option name="width" value="1386" />
     <option name="height" value="744" />
+=======
+  <component name="ProjectFrameBounds">
+    <option name="width" value="683" />
+    <option name="height" value="728" />
+>>>>>>> Stashed changes
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -172,6 +195,7 @@
               <item name="wangdao_project2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+<<<<<<< Updated upstream
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="cskaoyan" type="462c0819:PsiDirectoryNode" />
@@ -191,6 +215,8 @@
               <item name="wangdao_project2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> Stashed changes
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -299,14 +325,11 @@
       <updated>1561530959501</updated>
       <workItem from="1561530960994" duration="2170000" />
       <workItem from="1561538147114" duration="1099000" />
-      <workItem from="1561539256958" duration="989000" />
+      <workItem from="1561539256958" duration="2535000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestBySong_selectTest - 2019.06.26 at 16h 33m 42s.xml">
-      <configuration name="TestBySong.selectTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestBySong_selectTest - 2019.06.26 at 16h 35m 29s.xml">
       <configuration name="TestBySong.selectTest" configurationId="JUnit" />
     </history-entry>
@@ -334,14 +357,25 @@
     <history-entry file="TestBySong_selectTest - 2019.06.26 at 17h 08m 22s.xml">
       <configuration name="TestBySong.selectTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestBySong_selectTest - 2019.06.26 at 17h 15m 31s.xml">
+      <configuration name="TestBySong.selectTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< Updated upstream
     <option name="totallyTimeSpent" value="8917000" />
+=======
+    <option name="totallyTimeSpent" value="10432000" />
+>>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
+<<<<<<< Updated upstream
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49846154" visible="true" weight="0.32526475" />
+=======
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49846154" visible="true" weight="0.32223904" />
+>>>>>>> Stashed changes
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -353,13 +387,21 @@
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3289689" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.7269289" weight="0.66448444" />
+<<<<<<< Updated upstream
       <window_info anchor="bottom" x="22" y="246" width="1322" height="276" id="Debug" order="4" sideWeight="0.49924356" weight="0.56792146" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32852563" />
       <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.051369864" />
+=======
+      <window_info anchor="bottom" x="22" y="246" width="1322" height="276" id="Debug" order="4" sideWeight="0.49848714" weight="0.68085104" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" weight="0.32852563" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.7284418" visible="true" weight="0.7152209" />
+>>>>>>> Stashed changes
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" visible="true" weight="0.56792146" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.27155825" side_tool="true" visible="true" weight="0.7152209" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32733223" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
@@ -368,7 +410,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24810892" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.25416037" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.100605145" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" weight="0.32980332" />
@@ -465,7 +507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cskaoyan/controller/Controller.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cskaoyan/generator/Generator.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/repository/org/mybatis/mybatis/3.2.8/mybatis-3.2.8.jar!/org/apache/ibatis/session/SqlSession.class" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -504,13 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/applicationContext-general.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/cskaoyan/mapper/COrderMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -525,27 +559,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/applicationContext-database.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cskaoyan/mapper/CustomMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="13" column="4" selection-start-line="13" selection-end-line="20" selection-end-column="14" />
+        <state relative-caret-position="69">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cskaoyan/mapper/DepartmentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cskaoyan/mapper/DeviceCheckMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cskaoyan/mapper/DeviceFaultMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="153" column="15" selection-start-line="153" selection-start-column="15" selection-end-line="153" selection-end-column="15" />
+        <state relative-caret-position="-111">
+          <caret line="63" column="24" lean-forward="true" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/cskaoyan/membertest/TestBySong.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+        <state relative-caret-position="368">
+          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/applicationContext-general.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/applicationContext-database.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cskaoyan/controller/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
