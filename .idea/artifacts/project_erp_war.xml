@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="project_erp:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>project_erp</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="production_ms.war">
+      <element id="artifact" artifact-name="project_erp:war exploded" />
+    </root>
+  </artifact>
+</component>
