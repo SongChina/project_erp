@@ -35,8 +35,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/cskaoyan/membertest/TestBySong.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+            <state relative-caret-position="333">
+              <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -556,7 +559,7 @@
       <workItem from="1561539256958" duration="2535000" />
       <workItem from="1561551668099" duration="748000" />
       <workItem from="1561552426253" duration="4689000" />
-      <workItem from="1561557256600" duration="6666000" />
+      <workItem from="1561557256600" duration="6967000" />
     </task>
     <servers />
   </component>
@@ -593,13 +596,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21165000" />
+    <option name="totallyTimeSpent" value="21466000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7326389" visible="true" weight="0.21633889" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7326389" visible="true" weight="0.32526475" />
       <window_info id="Structure" order="1" sideWeight="0.50574714" side_tool="true" weight="0.10363086" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -610,12 +612,12 @@
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3289689" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.7269289" visible="true" weight="0.63175124" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.7269289" weight="0.13747954" />
       <window_info anchor="bottom" x="22" y="246" width="1322" height="276" id="Debug" order="4" sideWeight="0.49924356" weight="0.5695581" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32852563" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.29459903" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.29459903" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.27155825" side_tool="true" weight="0.35515547" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32569557" />
@@ -914,8 +916,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/cskaoyan/membertest/TestBySong.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        <state relative-caret-position="333">
+          <caret line="28" column="18" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
