@@ -26,8 +26,8 @@ public class Controller {
     }
 
     @RequestMapping("/")
-    public String getIndexPage(){
-        return "/WEB-INF/home.jsp";
+    public String getIndexPage(HttpServletRequest request, HttpServletResponse response){
+        return "home";
     }
 
 }

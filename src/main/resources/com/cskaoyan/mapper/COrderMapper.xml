@@ -15,8 +15,8 @@
     <result property="file" column="file"></result>
     <result property="status" column="status"></result>
   </resultMap>
-  <select id="selectByPage" resultType="corderMap">
-    select * from c_order limit #{pageSize} offset #{pageSize * (page - 1)}
+  <select id="selectByPage" resultMap="corderMap">
+    select * from c_order limit #{pageSize} offset #{page}
   </select>
   <resultMap id="BaseResultMap" type="com.cskaoyan.bean.COrder">
     <id column="order_id" jdbcType="VARCHAR" property="orderId" />
