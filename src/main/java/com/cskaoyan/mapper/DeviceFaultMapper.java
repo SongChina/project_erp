@@ -4,7 +4,9 @@ import com.cskaoyan.bean.DeviceFault;
 import com.cskaoyan.bean.DeviceFaultExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface DeviceFaultMapper {
     long countByExample(DeviceFaultExample example);
 

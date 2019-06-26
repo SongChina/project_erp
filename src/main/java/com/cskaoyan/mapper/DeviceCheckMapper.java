@@ -4,7 +4,9 @@ import com.cskaoyan.bean.DeviceCheck;
 import com.cskaoyan.bean.DeviceCheckExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface DeviceCheckMapper {
     long countByExample(DeviceCheckExample example);
 
