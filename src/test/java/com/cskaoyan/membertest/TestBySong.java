@@ -26,7 +26,7 @@ public class TestBySong {
     @Test
     public void selectTest(){
         int x =9;
-        int y =5;
+        int y =8;
         COrder cOrder = mapper.selectByPrimaryKey("000001");
         System.out.println(cOrder);
     }
