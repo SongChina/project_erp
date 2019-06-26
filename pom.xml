@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.hqu</groupId>
-    <artifactId>production_ms</artifactId>
+    <artifactId>project_erp_github</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
 
@@ -39,11 +39,11 @@
             <artifactId>jackson-core</artifactId>
             <version>2.6.0</version>
         </dependency>-->
-<!--        <dependency>
+        <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>2.4.4</version>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-mapper-asl</artifactId>
@@ -57,16 +57,12 @@
             <scope>test</scope>
         </dependency>
         <!-- 日志处理 -->
-       <!-- <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.6.4</version>
-        </dependency>-->
-<!--        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>2.11.2</version>
-        </dependency>-->
+
+        <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>1.2.16</version>
+    </dependency>
         <!-- Mybatis -->
         <dependency>
             <groupId>org.mybatis</groupId>
@@ -143,7 +139,7 @@
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
+            <version>3.0-alpha-1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

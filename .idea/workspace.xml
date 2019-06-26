@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="project_erp_github:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
     <list default="true" id="a2094ad6-6898-4e96-ba0f-9d49bced08d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cskaoyan/controller/DeviceListController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cskaoyan/generator/Generator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mydb.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mydb.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/applicationContext-general.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/applicationContext-general.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/springmvc-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/springmvc-servlet.xml" afterDir="false" />
-=======
-    <list default="true" id="cbb65f63-51c2-47b8-8947-9c5b77541fcf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cskaoyan/controller/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cskaoyan/service/COrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cskaoyan/service/impl/COrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
->>>>>>> Stashed changes
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cskaoyan/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cskaoyan/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cskaoyan/generator/Generator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cskaoyan/mapper/COrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cskaoyan/mapper/COrderMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/cskaoyan/mapper/COrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/cskaoyan/mapper/COrderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/kindeditor-4.1.10/kindeditor-all-min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/kindeditor-4.1.10/kindeditor-all-min.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,20 +29,16 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="project_erp_github" />
+  </component>
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-<<<<<<< Updated upstream
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/springmvc-servlet.xml">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="772">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
-=======
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cskaoyan/controller/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
->>>>>>> Stashed changes
+            <state relative-caret-position="971">
+              <caret line="82" column="18" lean-forward="true" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -63,6 +61,8 @@
       <find>.RequestMappingHandlerAdapter</find>
       <find>StaticLoggerBinder</find>
       <find>log</find>
+      <find>slf</find>
+      <find>error</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -83,8 +83,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/cskaoyan/mapper/DepartmentMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cskaoyan/mapper/DeviceCheckMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cskaoyan/mapper/DeviceFaultMapper.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/cskaoyan/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -114,16 +114,11 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="production_ms" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="project_erp_github" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="production_ms" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="production_ms" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="project_erp_github" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
       </expand>
@@ -134,17 +129,10 @@
     <option name="jreName" value="1.8" />
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
-<<<<<<< Updated upstream
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="649" />
-    <option name="y" value="22" />
-    <option name="width" value="1386" />
-    <option name="height" value="744" />
-=======
-  <component name="ProjectFrameBounds">
+    <option name="x" value="683" />
     <option name="width" value="683" />
     <option name="height" value="728" />
->>>>>>> Stashed changes
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -157,86 +145,129 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="wangdao_project2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wangdao_project2" type="462c0819:PsiDirectoryNode" />
+              <item name="project_erp_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_erp_github" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="wangdao_project2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wangdao_project2" type="462c0819:PsiDirectoryNode" />
+              <item name="project_erp_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_erp_github" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="wangdao_project2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wangdao_project2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="wangdao_project2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wangdao_project2" type="462c0819:PsiDirectoryNode" />
+              <item name="project_erp_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_erp_github" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="wangdao_project2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wangdao_project2" type="462c0819:PsiDirectoryNode" />
+              <item name="project_erp_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_erp_github" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="wangdao_project2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wangdao_project2" type="462c0819:PsiDirectoryNode" />
+              <item name="project_erp_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_erp_github" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-<<<<<<< Updated upstream
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="cskaoyan" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="wangdao_project2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wangdao_project2" type="462c0819:PsiDirectoryNode" />
+              <item name="project_erp_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_erp_github" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="cskaoyan" type="462c0819:PsiDirectoryNode" />
-              <item name="interceptor" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="wangdao_project2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wangdao_project2" type="462c0819:PsiDirectoryNode" />
+              <item name="project_erp_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_erp_github" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-=======
->>>>>>> Stashed changes
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cskaoyan" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project_erp_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_erp_github" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cskaoyan" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project_erp_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_erp_github" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="wangdao_project2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="wangdao_project2" type="462c0819:PsiDirectoryNode" />
+              <item name="project_erp_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_erp_github" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="spring" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="project_erp_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_erp_github" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project_erp_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_erp_github" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project_erp_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_erp_github" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project_erp_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_erp_github" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project_erp_github" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project_erp_github" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="membertest" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/.idea/workspace.xml&#10;L:/IDEA_Project_2019/project_erp_github/.idea/encodings.xml" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1561533224437" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
@@ -266,49 +297,182 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestBySong.selectTest">
-    <configuration name="TestBySong.insertTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="project_erp_github" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cskaoyan.membertest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cskaoyan.membertest" />
-      <option name="MAIN_CLASS_NAME" value="com.cskaoyan.membertest.TestBySong" />
-      <option name="METHOD_NAME" value="insertTest" />
-      <option name="TEST_OBJECT" value="method" />
+  <component name="RunManager">
+    <configuration name="Tomcat 8.5.372" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.372" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="project_erp_github:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_8_5_372_project_erp_github" />
+        <option name="HTTP_PORT" value="80" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="53762" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="project_erp_github:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.372" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment>
+        <artifact name="project_erp_github:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_project_erp_github" />
+        <option name="HTTP_PORT" value="80" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="53762" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="project_erp_github:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="LOCAL" value="false" />
+      <deployment />
+      <server-settings>
+        <data>
+          <option name="targets">
+            <list>
+              <WatchedTargetModelImpl>
+                <option name="name" value="CONTEXT_XML" />
+                <name>CONTEXT_XML</name>
+              </WatchedTargetModelImpl>
+              <StagingTargetModelImpl>
+                <option name="name" value="STAGING" />
+                <name>STAGING</name>
+              </StagingTargetModelImpl>
+            </list>
+          </option>
+          <option name="transportHostId" />
+        </data>
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="TOMCAT_LOCALHOST_LOG_ID" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="54650" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestBySong.selectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="project_erp_github" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.cskaoyan.membertest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.cskaoyan.membertest" />
-      <option name="MAIN_CLASS_NAME" value="com.cskaoyan.membertest.TestBySong" />
-      <option name="METHOD_NAME" value="selectTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="JUnit.TestBySong.insertTest" />
-      <item itemvalue="JUnit.TestBySong.selectTest" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.TestBySong.selectTest" />
-        <item itemvalue="JUnit.TestBySong.insertTest" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpringGeneralSettings">
     <option name="allowAutoConfigurationMode" value="true" />
@@ -318,7 +482,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cbb65f63-51c2-47b8-8947-9c5b77541fcf" name="Default Changelist" comment="" />
+      <changelist id="a2094ad6-6898-4e96-ba0f-9d49bced08d4" name="Default Changelist" comment="" />
       <created>1561530959501</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -326,13 +490,12 @@
       <workItem from="1561530960994" duration="2170000" />
       <workItem from="1561538147114" duration="1099000" />
       <workItem from="1561539256958" duration="2535000" />
+      <workItem from="1561551668099" duration="748000" />
+      <workItem from="1561552426253" duration="3161000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestBySong_selectTest - 2019.06.26 at 16h 35m 29s.xml">
-      <configuration name="TestBySong.selectTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestBySong_selectTest - 2019.06.26 at 16h 37m 55s.xml">
       <configuration name="TestBySong.selectTest" configurationId="JUnit" />
     </history-entry>
@@ -360,57 +523,45 @@
     <history-entry file="TestBySong_selectTest - 2019.06.26 at 17h 15m 31s.xml">
       <configuration name="TestBySong.selectTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TestBySong_selectTest - 2019.06.26 at 20h 31m 02s.xml">
+      <configuration name="TestBySong.selectTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< Updated upstream
-    <option name="totallyTimeSpent" value="8917000" />
-=======
-    <option name="totallyTimeSpent" value="10432000" />
->>>>>>> Stashed changes
+    <option name="totallyTimeSpent" value="12971000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-<<<<<<< Updated upstream
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49846154" visible="true" weight="0.32526475" />
-=======
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49846154" visible="true" weight="0.32223904" />
->>>>>>> Stashed changes
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6647834" visible="true" weight="0.22087745" />
+      <window_info id="Structure" order="1" sideWeight="0.50574714" side_tool="true" weight="0.10363086" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" sideWeight="0.50153846" side_tool="true" weight="0.24962178" />
-      <window_info id="Web" order="7" sideWeight="0.50119334" side_tool="true" weight="0.24962178" />
+      <window_info id="Favorites" order="6" sideWeight="0.50574714" side_tool="true" weight="0.10363086" />
+      <window_info id="Web" order="7" sideWeight="0.33521658" side_tool="true" visible="true" weight="0.22087745" />
       <window_info anchor="bottom" id="Spring" order="0" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3289689" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.7269289" weight="0.66448444" />
-<<<<<<< Updated upstream
-      <window_info anchor="bottom" x="22" y="246" width="1322" height="276" id="Debug" order="4" sideWeight="0.49924356" weight="0.56792146" />
+      <window_info active="true" anchor="bottom" x="22" y="246" width="1322" height="276" id="Debug" order="4" sideWeight="0.49924356" visible="true" weight="0.1309329" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32852563" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.051369864" />
-=======
-      <window_info anchor="bottom" x="22" y="246" width="1322" height="276" id="Debug" order="4" sideWeight="0.49848714" weight="0.68085104" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32852563" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.7284418" visible="true" weight="0.7152209" />
->>>>>>> Stashed changes
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.051369864" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.27155825" side_tool="true" visible="true" weight="0.7152209" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32733223" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.27155825" side_tool="true" weight="0.35515547" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32569557" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
-      <window_info anchor="bottom" id="Application Servers" order="14" />
+      <window_info anchor="bottom" id="Application Servers" order="14" weight="0.1767594" />
       <window_info anchor="bottom" id="Java Enterprise" order="15" weight="0.32903227" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24810892" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.100605145" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.22768533" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" weight="0.32980332" />
@@ -455,6 +606,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fsds" />
+    <option name="LAST_COMMIT_MESSAGE" value="fsds" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -498,7 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/production_ms.iml" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/cskaoyan/mapper/WorkMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -507,7 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cskaoyan/generator/Generator.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/repository/org/mybatis/mybatis/3.2.8/mybatis-3.2.8.jar!/org/apache/ibatis/session/SqlSession.class" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -538,24 +691,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1364">
-          <caret line="63" column="20" lean-forward="true" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/cskaoyan/mapper/COrderMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="136" column="11" lean-forward="true" selection-start-line="136" selection-start-column="11" selection-end-line="136" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mydb.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -587,13 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-111">
-          <caret line="63" column="24" lean-forward="true" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/cskaoyan/membertest/TestBySong.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -611,17 +743,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/applicationContext-database.xml">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        <state relative-caret-position="227">
+          <caret line="669" column="20" lean-forward="true" selection-start-line="669" selection-start-column="20" selection-end-line="669" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cskaoyan/generator/Generator.java" />
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cskaoyan/controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="128">
+          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="57" column="41" lean-forward="true" selection-start-line="57" selection-start-column="41" selection-end-line="57" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mydb.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/applicationContext-database.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="971">
+          <caret line="82" column="18" lean-forward="true" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
         </state>
       </provider>
     </entry>
