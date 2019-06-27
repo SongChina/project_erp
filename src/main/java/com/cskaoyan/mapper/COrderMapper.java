@@ -30,6 +30,6 @@ public interface COrderMapper {
 
     int updateByPrimaryKey(COrder record);
 
-    List<COrder> selectByPage(@Param("page") int page, @Param("pageSize") int pageSize);
+    List<COrder> selectByPage(@Param("limit") int limit, @Param("offset") int offset);
 
 }

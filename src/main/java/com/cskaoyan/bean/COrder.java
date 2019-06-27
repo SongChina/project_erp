@@ -32,6 +32,7 @@ public class COrder {
         return orderId;
     }
 
+
     public void setOrderId(String orderId) {
         this.orderId = orderId == null ? null : orderId.trim();
     }
