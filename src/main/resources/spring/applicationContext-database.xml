@@ -21,9 +21,9 @@
         </bean>-->
     <bean id="myds" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="driverClass" value="com.mysql.jdbc.Driver"/>
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/project_2?characterEncoding=utf8"/>
+        <property name="jdbcUrl" value="${url}"/>
         <property name="user" value="root"/>
-        <property name="password" value="WPM266011"/>
+        <property name="password" value="root"/>
     </bean>
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
