@@ -1,0 +1,10 @@
+.idea/
+target/
+mydb.properties
+*.iml
+log4j.properties
+applicationContext-database.xml
+/小组信息
+pom.xml
+
+

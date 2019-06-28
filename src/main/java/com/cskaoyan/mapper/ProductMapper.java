@@ -4,7 +4,9 @@ import com.cskaoyan.bean.Product;
 import com.cskaoyan.bean.ProductExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface ProductMapper {
     long countByExample(ProductExample example);
 
@@ -27,4 +29,7 @@ public interface ProductMapper {
     int updateByPrimaryKeySelective(Product record);
 
     int updateByPrimaryKey(Product record);
+
+
+    List<Product> queryAllProduct();
 }

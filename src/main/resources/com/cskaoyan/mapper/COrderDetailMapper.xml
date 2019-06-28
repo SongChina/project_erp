@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cskaoyan.mapper.COrderDetailMapper">
+    <resultMap id="corderMap" type="com.cskaoyan.bean.COrderDetail">
+        <result property="orderId" column="order_id"></result>
+        <result property="customId" column="custom_id"></result>
+        <result property="productId" column="product_id"></result>
+        <result property="orderDate" column="order_date"></result>
+        <result property="requestDate" column="request_date"></result>
+        <result property="note" column="note"></result>
+        <result property="quantity" column="quantity"></result>
+        <result property="unitPrice" column="unit_price"></result>
+        <result property="unit" column="unit"></result>
+        <result property="image" column="image"></result>
+        <result property="file" column="file"></result>
+        <result property="status" column="status"></result>
+        <association property="custom" select="com.cskaoyan.mapper.CustomMapper.selectByPrimaryKey"  column="custom_id"></association>
+        <association property="product" select="com.cskaoyan.mapper.ProductMapper.selectByPrimaryKey" column="product_id"></association>
+        <!--<association property="product" column="productId" select="com.cskaoyan.mapper.ProductMapper.selectByPrimaryKey"></association>-->
+    </resultMap>
+    <select id="com.cskaoyan.mapper.COrderDetailMapper.queryCOrderDetailByPage" resultMap="corderMap">
+        select * from c_order limit #{limit} offset #{offset}
+    </select>
+
+<!--    <resultMap id="customMap" type="com.cskaoyan.bean.Custom">
+        <id column="custom_id" jdbcType="VARCHAR" property="customId" />
+        <result column="custom_name" jdbcType="VARCHAR" property="customName" />
+        <result column="full_name" jdbcType="VARCHAR" property="fullName" />
+        <result column="address" jdbcType="VARCHAR" property="address" />
+        <result column="fax" jdbcType="VARCHAR" property="fax" />
+        <result column="email" jdbcType="VARCHAR" property="email" />
+        <result column="owner_name" jdbcType="VARCHAR" property="ownerName" />
+        <result column="owner_tel" jdbcType="VARCHAR" property="ownerTel" />
+        <result column="status" jdbcType="INTEGER" property="status" />
+        <result column="note" jdbcType="VARCHAR" property="note" />
+    </resultMap>
+    <select id="selectCustomByPrimaryKey" parameterType="java.lang.String" resultMap="customMap">
+        select
+        *
+        from custom
+        where custom_id = #{customId,jdbcType=VARCHAR}
+    </select>-->
+
+
+</mapper>

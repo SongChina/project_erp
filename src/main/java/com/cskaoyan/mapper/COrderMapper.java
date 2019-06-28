@@ -32,4 +32,6 @@ public interface COrderMapper {
 
     List<COrder> selectByPage(@Param("limit") int limit, @Param("offset") int offset);
 
+    List<COrder> selectAllOrders();
+
 }

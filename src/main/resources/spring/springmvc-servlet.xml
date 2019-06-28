@@ -39,13 +39,13 @@
     <mvc:resources mapping="/js/**" location="/WEB-INF/js/"/>
     <mvc:resources mapping="/css/**" location="/WEB-INF/css/"/>
     <mvc:resources mapping="/image/**" location="/WEB-INF/image/"/>
-    <mvc:interceptors>
+  <!--  <mvc:interceptors>
         <mvc:interceptor>
-            <!--mapping中填url-->
-            <mvc:mapping path="/getPersonalPage"/>
+            &lt;!&ndash;mapping中填url&ndash;&gt;
+            <mvc:mapping path="/order/insert"/>
             <bean class="com.cskaoyan.interceptor.MyInterceptor"/>
         </mvc:interceptor>
-    </mvc:interceptors>
+    </mvc:interceptors>-->
 
 
 </beans>

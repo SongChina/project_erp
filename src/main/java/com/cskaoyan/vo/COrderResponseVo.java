@@ -1,18 +1,20 @@
 package com.cskaoyan.vo;
 
+import java.util.List;
+
 /**
  * Created by little Stone
  * Date 2019/6/17 Time 16:51
  */
 public class COrderResponseVo<T> {
-	T rows;
+	List<T> rows;
 	int total;
 
-	public T getRows() {
+	public List<T> getRows() {
 		return rows;
 	}
 
-	public void setRows(T rows) {
+	public void setRows(List<T> rows) {
 		this.rows = rows;
 	}
 

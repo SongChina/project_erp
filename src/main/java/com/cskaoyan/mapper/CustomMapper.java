@@ -29,4 +29,6 @@ public interface CustomMapper {
     int updateByPrimaryKeySelective(Custom record);
 
     int updateByPrimaryKey(Custom record);
+
+    List<Custom> queryAllCustom();
 }
