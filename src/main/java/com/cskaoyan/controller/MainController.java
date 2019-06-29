@@ -47,11 +47,6 @@ public class MainController {
 
 
 
-    @RequestMapping("custom/edit_judge")
-    @ResponseBody
-    public String getNothing10() {
-        return "{}";
-    }
 
 
 

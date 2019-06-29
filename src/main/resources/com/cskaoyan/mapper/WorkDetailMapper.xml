@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cskaoyan.mapper.WorkDetailMapper">
+
+    <resultMap id="workDetailMap" type="com.cskaoyan.bean.WorkDetail">
+        <result property="workId" column="work_id"></result>
+        <result property="processNumber" column="process_number"></result>
+        <result property="productId" column="product_id"></result>
+        <result property="processId" column="process_id"></result>
+        <result property="deviceId" column="device_id"></result>
+        <result property="rating" column="rating"></result>
+        <association property="product" column="product_id" select="com.cskaoyan.mapper.ProductMapper.selectByPrimaryKey"></association>
+        <association property="process" column="process_id" select="com.cskaoyan.mapper.ProcessMapper.selectByPrimaryKey"></association>
+        <association property="device" column="device_id" select="com.cskaoyan.mapper.DeviceMapper.selectByPrimaryKey"></association>
+    </resultMap>
+
+    <select id="queryWorkDetailByPage" resultMap="workDetailMap">
+        select * from work limit #{limit} offset #{offset}
+    </select>
+</mapper>

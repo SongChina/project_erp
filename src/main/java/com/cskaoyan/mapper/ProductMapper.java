@@ -32,4 +32,6 @@ public interface ProductMapper {
 
 
     List<Product> queryAllProduct();
+
+    List<Product> queryProductByPage(@Param("limit") int limit, @Param("offset") int offset);
 }

@@ -31,4 +31,6 @@ public interface CustomMapper {
     int updateByPrimaryKey(Custom record);
 
     List<Custom> queryAllCustom();
+
+    List<Custom> queryCustomByPage(@Param("limit") int limit, @Param("offset") int offset);
 }

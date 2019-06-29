@@ -184,14 +184,21 @@
     <build>
         <finalName>${project.artifactId}</finalName>
         <!-- idea不会编译src的java目录的xml文件,将IDEA maven项目中src源代码下的xml等资源文件编译进classes文件夹 -->
-        <resources>
+<!--        <resources>
             <resource>
                 <directory>src/main/java</directory>
                 <includes>
+                    <include>**/*.properties</include>
                     <include>**/*.xml</include>
                 </includes>
             </resource>
-        </resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
+        </resources>-->
         <plugins>
             <!-- 资源文件拷贝插件 -->
             <plugin>

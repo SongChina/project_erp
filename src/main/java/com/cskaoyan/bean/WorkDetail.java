@@ -1,9 +1,9 @@
 package com.cskaoyan.bean;
 
-public class COrderDetail extends COrder{
-    public Product product;
-    public Custom custom;
-    public Device device;
+public class WorkDetail extends Work{
+    Product product;
+    Process process;
+    Device device;
 
     public Device getDevice() {
         return device;
@@ -21,11 +21,11 @@ public class COrderDetail extends COrder{
         this.product = product;
     }
 
-    public Custom getCustom() {
-        return custom;
+    public Process getProcess() {
+        return process;
     }
 
-    public void setCustom(Custom custom) {
-        this.custom = custom;
+    public void setProcess(Process process) {
+        this.process = process;
     }
 }

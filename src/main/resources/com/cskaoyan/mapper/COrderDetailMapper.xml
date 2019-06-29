@@ -22,6 +22,27 @@
         select * from c_order limit #{limit} offset #{offset}
     </select>
 
+    <select id="queryCOrderDetailByPageInCOrderId" resultMap="corderMap">
+        select * from c_order where order_id like #{searchValue} limit #{limit} offset #{offset}
+    </select>
+    
+    <select id="queryCOrderDetailByPageInCustomIds" resultMap="corderMap">
+        select * from c_order where custom_id in 
+        <foreach collection="customIds" item="customid" open="(" close=")" separator=",">
+            #{customid}
+        </foreach>
+        limit #{limit}
+        offset #{offset}
+    </select>
+
+    <select id="queryCOrderDetailByPageInProductIds" resultMap="corderMap">
+        select * from c_order where product_id in
+        <foreach collection="productIds" item="productid" open="(" close=")" separator=",">
+            #{productid}
+        </foreach>
+        limit #{limit}
+        offset #{offset}
+    </select>
 <!--    <resultMap id="customMap" type="com.cskaoyan.bean.Custom">
         <id column="custom_id" jdbcType="VARCHAR" property="customId" />
         <result column="custom_name" jdbcType="VARCHAR" property="customName" />
