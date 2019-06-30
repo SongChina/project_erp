@@ -1,4 +1,4 @@
-package com.cskaoyan.controller.corder_management;
+package com.cskaoyan.controller.plan_module;
 
 import com.cskaoyan.bean.*;
 import com.cskaoyan.mapper.COrderDetailMapper;
@@ -8,24 +8,18 @@ import com.cskaoyan.mapper.ProductMapper;
 import com.cskaoyan.vo.COrderResponseVo;
 import com.cskaoyan.vo.Message;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
-import sun.security.provider.MD5;
 
-import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.xml.ws.spi.http.HttpContext;
-import java.awt.*;
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -123,6 +117,38 @@ public class COrderController {
         uploadMessage.setUrl(url);
         return uploadMessage;
     }
+
+    @RequestMapping("pic/delete")
+    @ResponseBody
+    public FileOperationStatus deletePic(HttpServletRequest request, @RequestParam("picName") String picName){
+        String imageName = picName.replace("/pic/", "");
+        FileOperationStatus fileOperationStatus = new FileOperationStatus();
+        String realPath = request.getSession().getServletContext().getRealPath("upload/corder/image/" + imageName);
+        File file = new File(realPath);
+        boolean delete = file.delete();
+        if (delete)
+            fileOperationStatus.setData("success");
+        else
+            fileOperationStatus.setData("failure");
+        return fileOperationStatus;
+    }
+
+    @RequestMapping("file/delete")
+    @ResponseBody
+    public FileOperationStatus deleteFile(HttpServletRequest request, @RequestParam("fileName") String fileName){
+        String[] split = fileName.split("fileName=/file/");
+        fileName = split[split.length - 1];
+        FileOperationStatus fileOperationStatus = new FileOperationStatus();
+        String realPath = request.getSession().getServletContext().getRealPath("upload/corder/file/" + fileName);
+        File file = new File(realPath);
+        boolean delete = file.delete();
+        if (delete)
+            fileOperationStatus.setData("success");
+        else
+            fileOperationStatus.setData("failure");
+        return fileOperationStatus;
+    }
+
     public static  String uuid(){
         String s= UUID.randomUUID().toString();
 
@@ -240,6 +266,7 @@ public class COrderController {
         return "{}";
     }
 
+
     @RequestMapping("order/edit_judge")
     @ResponseBody
     public String getNothing3() {
@@ -303,5 +330,12 @@ public class COrderController {
             message.setMsg("OK");
         }
         return message;
+    }
+
+    @RequestMapping("order/get/{corderId}")
+    @ResponseBody
+    public COrderDetail getSingleCOrderDetail(@PathVariable("corderId") String cOrderId){
+        COrderDetail cOrderDetail = cOrderDetailMapper.querySingleCOrderDetailInCorderId(cOrderId);
+        return cOrderDetail;
     }
 }

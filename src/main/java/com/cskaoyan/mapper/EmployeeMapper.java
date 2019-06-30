@@ -3,7 +3,9 @@ package com.cskaoyan.mapper;
 import com.cskaoyan.bean.Employee;
 import com.cskaoyan.bean.EmployeeExample;
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
+
 
 public interface EmployeeMapper {
     long countByExample(EmployeeExample example);
@@ -27,4 +29,7 @@ public interface EmployeeMapper {
     int updateByPrimaryKeySelective(Employee record);
 
     int updateByPrimaryKey(Employee record);
+
+
+
 }

@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cskaoyan.mapper.DeviceCheckMapper">
+  <!--自己写的resultMap-->
+  <resultMap id="deviceCheckMap" type="com.cskaoyan.bean.DeviceCheck">
+    <result column="device_check_id" jdbcType="VARCHAR" property="deviceCheckId" />
+    <result column="device_id" jdbcType="VARCHAR" property="deviceId" />
+    <result column="device_check_emp_id" jdbcType="VARCHAR" property="deviceCheckEmpId" />
+    <result column="device_check_date" jdbcType="TIMESTAMP" property="deviceCheckDate" />
+    <result column="device_check_result" jdbcType="VARCHAR" property="deviceCheckResult" />
+    <result column="device_check_fault_id" jdbcType="VARCHAR" property="deviceCheckFaultId" />
+    <result column="device_name" jdbcType="VARCHAR" property="deviceName" />
+    <result column="emp_name" jdbcType="VARCHAR" property="deviceCheckEmp" />
+  </resultMap>
+  <!--基本字段-->
+  <sql id="baseSqlColumn">
+    device_check_id,
+    device_check.device_id,
+    device_check_emp_id,
+    device_check_date,
+    device_check_result,
+    device_check_fault_id,
+	device.device_name,
+	employee.emp_name
+  </sql>
+
+  <!--查询所有设备例检-->
+  <select id="queryDeviceCheckList" resultMap="deviceCheckMap">
+    select
+    <include refid="baseSqlColumn"/>
+    FROM device_check
+    LEFT JOIN device  ON device_check.device_id = device.device_id
+    LEFT JOIN employee  ON device_check.device_check_emp_id = employee.emp_id
+  </select>
+
+  <!--通过设备例检id查询设备例检-->
+  <select id="queryDeviceCheckById" resultMap="deviceCheckMap">
+    select
+    <include refid="baseSqlColumn"/>
+    FROM device_check
+    LEFT JOIN device  ON device_check.device_id = device.device_id
+    LEFT JOIN employee  ON device_check.device_check_emp_id = employee.emp_id
+    where device_check_id like concat('%', #{searchValue}, '%')
+  </select>
+
+  <!--通过设备名称查询设备例检-->
+  <select id="queryDeviceCheckByDeviceName" resultMap="deviceCheckMap">
+    select
+    <include refid="baseSqlColumn"/>
+    FROM device_check
+    LEFT JOIN device  ON device_check.device_id = device.device_id
+    LEFT JOIN employee  ON device_check.device_check_emp_id = employee.emp_id
+    where device.device_name like concat('%', #{searchValue}, '%')
+  </select>
+
+  <!--修改例检结果-->
+  <select id="updateDeviceCheckResult">
+    update device_check
+    set device_check_result = #{deviceCheck.deviceCheckResult}
+    where device_check_id = #{deviceCheck.deviceCheckId}
+  </select>
+
+
   <resultMap id="BaseResultMap" type="com.cskaoyan.bean.DeviceCheck">
     <id column="device_check_id" jdbcType="VARCHAR" property="deviceCheckId" />
     <result column="device_id" jdbcType="VARCHAR" property="deviceId" />

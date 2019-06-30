@@ -34,4 +34,10 @@ public interface ProductMapper {
     List<Product> queryAllProduct();
 
     List<Product> queryProductByPage(@Param("limit") int limit, @Param("offset") int offset);
+
+    List<Product> queryProductByProductIdInPage(@Param("searchValue") String searchValue, @Param("limit") int limit, @Param("offset") int offset);
+
+    List<Product> queryProductByProductNameInPage(@Param("searchValue") String searchValue, @Param("limit") int limit, @Param("offset") int offset);
+
+    List<Product> queryProductByProductTypeInPage(@Param("searchValue") String searchValue, @Param("limit") int limit, @Param("offset") int offset);
 }

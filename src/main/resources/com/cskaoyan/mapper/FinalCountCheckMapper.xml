@@ -14,7 +14,75 @@
     <result column="emp_id" jdbcType="VARCHAR" property="empId" />
     <result column="result" jdbcType="VARCHAR" property="result" />
     <result column="note" jdbcType="VARCHAR" property="note" />
+    <result column="emp_name" jdbcType="VARCHAR" property="empName" />
   </resultMap>
+
+  <update id="update_all">
+        update final_count_check set  order_id = #{fCountCheck.orderId},
+                                      check_item = #{fCountCheck.checkItem},
+                                      sample = #{fCountCheck.sample},
+                                      check_number = #{fCountCheck.checkNumber},
+                                      unqualify = #{fCountCheck.unqualify},
+                                      cdate = #{fCountCheck.cdate},
+                                      measure_data = #{fCountCheck.measureData},
+                                      emp_id = #{fCountCheck.empId},
+                                      result = #{fCountCheck.result},
+                                      note = #{fCountCheck.note}
+                                      where f_count_check_id = #{fCountCheck.fCountCheckId}
+    </update>
+  <update id="update_note">
+         update final_count_check set note = #{note} where f_count_check_id = #{fCountCheckId}
+    </update>
+  <select id="searchfCountCheckByOrderId" resultMap="BaseResultMap">
+        select  fc.f_count_check_id,
+                fc.order_id,
+                fc.check_item,
+                fc.sample,
+                fc.check_number,
+                fc.unqualify,
+                fc.cdate,
+                fc.measure_data,
+                fc.emp_id,
+                fc.result,
+                fc.note,
+                e.emp_name
+ 				from final_count_check fc
+ 				left join employee e on fc.emp_id = e.emp_id
+ 				where order_id LIKE '%${searchValue}%'
+    </select>
+  <select id="searchfCountCheckByfCountCheckId" resultMap="BaseResultMap">
+        select  fc.f_count_check_id,
+                fc.order_id,
+                fc.check_item,
+                fc.sample,
+                fc.check_number,
+                fc.unqualify,
+                fc.cdate,
+                fc.measure_data,
+                fc.emp_id,
+                fc.result,
+                fc.note,
+                e.emp_name
+ 				from final_count_check fc
+ 				left join employee e on fc.emp_id = e.emp_id
+ 				where f_count_check_id LIKE '%${searchValue}%'
+    </select>
+  <select id="selectFinalCountCheck" resultMap="BaseResultMap" >
+        select  fc.f_count_check_id,
+                fc.order_id,
+                fc.check_item,
+                fc.sample,
+                fc.check_number,
+                fc.unqualify,
+                fc.cdate,
+                fc.measure_data,
+                fc.emp_id,
+                fc.result,
+                fc.note,
+                e.emp_name
+ 				from final_count_check fc
+ 				left join employee e on fc.emp_id = e.emp_id
+    </select>
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">

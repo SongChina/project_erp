@@ -1,10 +1,10 @@
-package com.cskaoyan.controller.corder_management;
+package com.cskaoyan.controller.plan_module;
 
 import com.cskaoyan.bean.*;
-import com.cskaoyan.mapper.COrderDetailMapper;
 import com.cskaoyan.mapper.ProductMapper;
 import com.cskaoyan.vo.COrderResponseVo;
 import com.cskaoyan.vo.Message;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -132,6 +132,48 @@ public class ProductController {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("product_edit");
         return modelAndView;
+    }
+
+    @RequestMapping("product/search_product_by_productId")
+    @ResponseBody
+    public COrderResponseVo<Product> getProductByProductId(@Param("searchValue") String searchValue,
+                                                                    @Param("page") int page, @Param("rows") int rows){
+        int limit = rows;
+        int offset = (page - 1) * rows;
+        List<Product> products = productMapper.queryProductByProductIdInPage("%" + searchValue + "%", limit, offset);
+
+        COrderResponseVo<Product> result = new COrderResponseVo<>();
+        result.setTotal(11);
+        result.setRows(products);
+        return result;
+    }
+
+    @RequestMapping("product/search_product_by_productName")
+    @ResponseBody
+    public COrderResponseVo<Product> getProductByProductName(@Param("searchValue") String searchValue,
+                                                           @Param("page") int page, @Param("rows") int rows){
+        int limit = rows;
+        int offset = (page - 1) * rows;
+        List<Product> products = productMapper.queryProductByProductNameInPage("%" + searchValue + "%", limit, offset);
+
+        COrderResponseVo<Product> result = new COrderResponseVo<>();
+        result.setTotal(11);
+        result.setRows(products);
+        return result;
+    }
+
+    @RequestMapping("product/search_product_by_productType")
+    @ResponseBody
+    public COrderResponseVo<Product> getProductByProductType(@Param("searchValue") String searchValue,
+                                                             @Param("page") int page, @Param("rows") int rows){
+        int limit = rows;
+        int offset = (page - 1) * rows;
+        List<Product> products = productMapper.queryProductByProductTypeInPage("%" + searchValue + "%", limit, offset);
+
+        COrderResponseVo<Product> result = new COrderResponseVo<>();
+        result.setTotal(11);
+        result.setRows(products);
+        return result;
     }
 
  /*   @ResponseBody

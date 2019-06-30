@@ -13,7 +13,15 @@
     <result column="status" jdbcType="INTEGER" property="status" />
     <result column="note" jdbcType="VARCHAR" property="note" />
   </resultMap>
-  <select id="selectCustomByPage" resultMap="BaseResultMap">
+
+  <select id="queryCustomByCustomIdInPage" resultMap="BaseResultMap">
+    select * from custom where custom_id like #{searchValue} limit #{limit} offset #{offset}
+  </select>
+
+  <select id="queryCustomByCustomNameInPage" resultMap="BaseResultMap">
+    select * from custom where custom_name like #{searchValue} limit #{limit} offset #{offset}
+  </select>
+  <select id="queryCustomByPage" resultMap="BaseResultMap">
         select * from custom limit #{limit} offset #{offset}
     </select>
   <select id="queryAllCustom" resultMap="BaseResultMap">

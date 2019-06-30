@@ -8,6 +8,18 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DeviceFaultMapper {
+
+    //新增方法
+    //查询所有设备故障信息
+
+    List<DeviceFault> queryDeviceFaultList();
+
+    //根据设备故障编号搜索
+    List<DeviceFault> queryDeviceFaultById(@Param("searchValue") String searchValue);
+
+    //根据设备名称编号搜索
+    List<DeviceFault> queryDeviceFaultByDeviceName(@Param("searchValue") String searchValue);
+
     long countByExample(DeviceFaultExample example);
 
     int deleteByExample(DeviceFaultExample example);
@@ -29,4 +41,7 @@ public interface DeviceFaultMapper {
     int updateByPrimaryKeySelective(DeviceFault record);
 
     int updateByPrimaryKey(DeviceFault record);
+
+
+    void updateDeviceFaultDetail(@Param("deviceFault") DeviceFault deviceFault);
 }

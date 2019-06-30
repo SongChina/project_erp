@@ -5,7 +5,7 @@ import java.util.Date;
 public class MaterialReceive {
     private String receiveId;
 
-    private String materialId;
+    private Material material;
 
     private Integer amount;
 
@@ -22,15 +22,15 @@ public class MaterialReceive {
     }
 
     public void setReceiveId(String receiveId) {
-        this.receiveId = receiveId == null ? null : receiveId.trim();
+        this.receiveId = receiveId;
     }
 
-    public String getMaterialId() {
-        return materialId;
+    public Material getMaterial() {
+        return material;
     }
 
-    public void setMaterialId(String materialId) {
-        this.materialId = materialId == null ? null : materialId.trim();
+    public void setMaterial(Material material) {
+        this.material = material;
     }
 
     public Integer getAmount() {
@@ -54,7 +54,7 @@ public class MaterialReceive {
     }
 
     public void setSender(String sender) {
-        this.sender = sender == null ? null : sender.trim();
+        this.sender = sender;
     }
 
     public String getReceiver() {
@@ -62,7 +62,7 @@ public class MaterialReceive {
     }
 
     public void setReceiver(String receiver) {
-        this.receiver = receiver == null ? null : receiver.trim();
+        this.receiver = receiver;
     }
 
     public String getNote() {
@@ -70,6 +70,6 @@ public class MaterialReceive {
     }
 
     public void setNote(String note) {
-        this.note = note == null ? null : note.trim();
+        this.note = note;
     }
 }

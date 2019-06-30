@@ -1,11 +1,10 @@
-package com.cskaoyan.controller.custom_management;
+package com.cskaoyan.controller.plan_module;
 
 import com.cskaoyan.bean.*;
-import com.cskaoyan.mapper.COrderDetailMapper;
-import com.cskaoyan.mapper.COrderMapper;
 import com.cskaoyan.mapper.CustomMapper;
 import com.cskaoyan.vo.COrderResponseVo;
 import com.cskaoyan.vo.Message;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,8 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -71,18 +68,45 @@ public class CustomController1 {
         Custom custom = customMapper.selectByPrimaryKey(customId);
         return custom;
     }
-
-
-
-    @RequestMapping("custom/delete_judge")
-    @ResponseBody
-    public String getNothing2() {
-        return "{}";
+    @RequestMapping("custom/add")
+    public ModelAndView getCustomAddPage() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("custom_add");
+        return modelAndView;
     }
 
-    @RequestMapping("custom/edit_judge")
+    @RequestMapping("custom/edit")
+    public ModelAndView getCustomEditPage() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("custom_edit");
+        return modelAndView;
+    }
+
+
+
+
+    @RequestMapping("custom/insert")
     @ResponseBody
-    public String getNothing3() {
+    public Object insertCustom(Custom custom) {
+        Message message = new Message();
+        Custom temp = customMapper.selectByPrimaryKey(custom.getCustomId());
+        if (temp != null) {
+            message.setStatus(400);
+            return message;
+        }
+
+        int insert = customMapper.insert(custom);
+        if (insert > 0) {
+            message.setStatus(200);
+            message.setMsg("OK");
+        }
+        return message;
+    }
+
+
+    @RequestMapping("custom/*_judge")
+    @ResponseBody
+    public String getNothing2() {
         return "{}";
     }
 
@@ -137,5 +161,34 @@ public class CustomController1 {
         }
         return message;
     }
+
+    @RequestMapping("custom/search_custom_by_customId")
+    @ResponseBody
+    public COrderResponseVo<Custom> getCustomByCustomId(@Param("searchValue") String searchValue,
+                                                           @Param("page") int page, @Param("rows") int rows){
+        int limit = rows;
+        int offset = (page - 1) * rows;
+        List<Custom> customs = customMapper.queryCustomByCustomIdInPage("%" + searchValue + "%", limit, offset);
+
+        COrderResponseVo<Custom> result = new COrderResponseVo<>();
+        result.setTotal(11);
+        result.setRows(customs);
+        return result;
+    }
+
+    @RequestMapping("custom/search_custom_by_customName")
+    @ResponseBody
+    public COrderResponseVo<Custom> getCustomByCustomName(@Param("searchValue") String searchValue,
+                                                        @Param("page") int page, @Param("rows") int rows){
+        int limit = rows;
+        int offset = (page - 1) * rows;
+        List<Custom> customs = customMapper.queryCustomByCustomNameInPage("%" + searchValue + "%", limit, offset);
+
+        COrderResponseVo<Custom> result = new COrderResponseVo<>();
+        result.setTotal(11);
+        result.setRows(customs);
+        return result;
+    }
+
 
 }

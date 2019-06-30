@@ -2,8 +2,9 @@ package com.cskaoyan.mapper;
 
 import com.cskaoyan.bean.UnqualifyApply;
 import com.cskaoyan.bean.UnqualifyApplyExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface UnqualifyApplyMapper {
     long countByExample(UnqualifyApplyExample example);
@@ -27,4 +28,13 @@ public interface UnqualifyApplyMapper {
     int updateByPrimaryKeySelective(UnqualifyApply record);
 
     int updateByPrimaryKey(UnqualifyApply record);
+
+    List<UnqualifyApply> selectUnqualifyApply();
+
+    List<UnqualifyApply> searchUnqualifyByUnqualifyId(@Param("searchValue") String searchValue);
+    List<UnqualifyApply> searchUnqualifyByPAgeByProductName(@Param("searchValue") String searchValue);
+
+    int update_note(@Param("unqualifyApplyId") String unqualifyApplyId, @Param("note") String note);
+    int update_all(@Param("unqualify") UnqualifyApply unqualifyApply);
+
 }

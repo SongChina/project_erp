@@ -336,4 +336,6 @@
       department_id = #{departmentId,jdbcType=VARCHAR}
     where emp_id = #{empId,jdbcType=VARCHAR}
   </update>
+
+
 </mapper>

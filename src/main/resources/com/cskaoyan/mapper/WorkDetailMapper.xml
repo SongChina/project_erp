@@ -17,4 +17,12 @@
     <select id="queryWorkDetailByPage" resultMap="workDetailMap">
         select * from work limit #{limit} offset #{offset}
     </select>
+
+    <select id="queryWorkByWorkIdInPage" resultMap="workDetailMap">
+    select * from work where work_id like #{searchValue} limit #{limit} offset #{offset}
+  </select>
+
+    <select id="queryWorkByProcessIdInPage" resultMap="workDetailMap">
+    select * from work where process_id like #{searchValue} limit #{limit} offset #{offset}
+  </select>
 </mapper>

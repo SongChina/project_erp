@@ -7,7 +7,47 @@
     <result column="requirement" jdbcType="VARCHAR" property="requirement" />
     <result column="add_time" jdbcType="TIMESTAMP" property="addTime" />
     <result column="revise_time" jdbcType="TIMESTAMP" property="reviseTime" />
+    <result column="technology_name" jdbcType="VARCHAR" property="technologyName"/>
   </resultMap>
+
+  <!-- 扩展的sql -->
+  <!-- 查询所有记录 -->
+  <select id="findAllTechnologyRequirements" resultMap="BaseResultMap">
+      select
+	        technology_requirement_id,
+		    technology_name,
+            a.technology_id,
+            requirement,
+            add_time,
+            revise_time
+			from technology_requirement a
+			left join technology b on a.technology_id = b.technology_id
+
+</select>
+
+  <!-- 通过工艺名称查询 -->
+  <select id="selectByTechnologyName" resultMap="BaseResultMap">
+      select
+	        technology_requirement_id,
+		    technology_name,
+            a.technology_id,
+            requirement,
+            add_time,
+            revise_time
+			from technology_requirement a
+			left join technology b on a.technology_id = b.technology_id
+			where technology_name like concat('%', #{searchValue}, '%')
+</select>
+
+
+
+
+
+
+
+
+
+
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -211,4 +251,6 @@
       revise_time = #{reviseTime,jdbcType=TIMESTAMP}
     where technology_requirement_id = #{technologyRequirementId,jdbcType=VARCHAR}
   </update>
+
+
 </mapper>

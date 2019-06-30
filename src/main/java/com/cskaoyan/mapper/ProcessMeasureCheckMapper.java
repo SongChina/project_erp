@@ -2,8 +2,9 @@ package com.cskaoyan.mapper;
 
 import com.cskaoyan.bean.ProcessMeasureCheck;
 import com.cskaoyan.bean.ProcessMeasureCheckExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface ProcessMeasureCheckMapper {
     long countByExample(ProcessMeasureCheckExample example);
@@ -27,4 +28,9 @@ public interface ProcessMeasureCheckMapper {
     int updateByPrimaryKeySelective(ProcessMeasureCheck record);
 
     int updateByPrimaryKey(ProcessMeasureCheck record);
+
+    List<ProcessMeasureCheck> selectProcessMeasureCheck();
+    List<ProcessMeasureCheck> searchById(@Param("searchValue") String searchValue);
+    int updateNote(@Param("pMeasureCheckId") String pMeasureCheckId, @Param("note") String note);
+    int updateAll(@Param("pMeasureCheck") ProcessMeasureCheck processMeasureCheck);
 }

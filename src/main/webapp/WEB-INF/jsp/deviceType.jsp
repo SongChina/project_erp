@@ -40,9 +40,9 @@
 </table>
 
 <!-- Toolbar -->
-<div  id="toolbar_deviceType" style=" height: 22px; padding: 3px 11px; background: #fafafa;">  
-	
-	<c:forEach items="${sessionScope.sysPermissionList}" var="per" >
+<div  id="toolbar_deviceType" style=" height: 22px; padding: 3px 11px; background: #fafafa;">
+	<!-- 去掉权限控制 -->
+	<%--<c:forEach items="${sessionScope.sysPermissionList}" var="per" >
 		<c:if test="${per=='deviceType:add'}">
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-add" onclick="deviceType_add()">
@@ -64,8 +64,23 @@
 				</a>
 		    </div>  
 		</c:if>
-	</c:forEach>
-	
+	</c:forEach>--%>
+
+	<div style="float: left;">
+		<a href="#" class="easyui-linkbutton" plain="true" icon="icon-add" onclick="deviceType_add()">
+			新增
+		</a>
+	</div>
+	<div style="float: left;">
+		<a href="#" class="easyui-linkbutton" plain="true" icon="icon-edit" onclick="deviceType_edit()">
+			编辑
+		</a>
+	</div>
+	<div style="float: left;">
+		<a href="#" class="easyui-linkbutton" plain="true" icon="icon-cancel" onclick="deviceType_delete()">
+			删除
+		</a>
+	</div>
 	<div class="datagrid-btn-separator"></div>  
 	
 	<div style="float: left;">  

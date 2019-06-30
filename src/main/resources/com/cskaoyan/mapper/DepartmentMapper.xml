@@ -179,4 +179,16 @@
       note = #{note,jdbcType=VARCHAR}
     where department_id = #{departmentId,jdbcType=VARCHAR}
   </update>
+  <!--查询department表-->
+  <select id="selectDepartmentAll" resultMap="BaseResultMap">
+    select department_id,department_name,note from department
+  </select>
+  <!--count department-->
+  <select id="countDepartment" >
+    select count(*) from department
+  </select>
+  <!--selectDepartmentById-->
+  <select id="selectDepartmentById" resultMap="BaseResultMap">
+    select department_id,department_name,note from department where department_id = #{id}
+  </select>
 </mapper>

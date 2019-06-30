@@ -27,4 +27,13 @@ public interface DeviceMaintainMapper {
     int updateByPrimaryKeySelective(DeviceMaintain record);
 
     int updateByPrimaryKey(DeviceMaintain record);
+
+    //新增方法
+    List<DeviceMaintain> queryDevicMaintainList();
+
+    List<DeviceMaintain> queryDeviceMaintainById(@Param("searchValue") String searchValue);
+
+    List<DeviceMaintain> queryDeviceMaintainByDeviceFaultId(String searchValue);
+
+    void updateDeviceMaintainNote(@Param("deviceMaintain") DeviceMaintain deviceMaintain);
 }

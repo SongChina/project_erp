@@ -8,6 +8,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CustomMapper {
+    List<Custom> queryCustomByCustomIdInPage(@Param("searchValue") String searchValue, @Param("limit") int limit, @Param("offset") int offset);
+
     long countByExample(CustomExample example);
 
     int deleteByExample(CustomExample example);
@@ -33,4 +35,6 @@ public interface CustomMapper {
     List<Custom> queryAllCustom();
 
     List<Custom> queryCustomByPage(@Param("limit") int limit, @Param("offset") int offset);
+
+    List<Custom> queryCustomByCustomNameInPage(@Param("searchValue") String searchValue, @Param("limit") int limit, @Param("offset") int offset);
 }

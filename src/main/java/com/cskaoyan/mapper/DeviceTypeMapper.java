@@ -6,6 +6,24 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface DeviceTypeMapper {
+
+    //新增方法
+
+    //查询设备种类总数
+    int queryTotalDeviceType();
+
+    //查询所有设备种类
+    List<DeviceType> queryDeviceTypeList();
+
+    //按设备种类Id查询
+    List<DeviceType> queryDeviceTypeById(@Param("searchValue") String searchValue);
+
+    //按设备种类Name查询
+    List<DeviceType> queryDeviceTypeByName(@Param("searchValue") String searchValue);
+
+    //查询设备种类id和name
+    DeviceType[] queryDeviceTypeIdAndName();
+
     long countByExample(DeviceTypeExample example);
 
     int deleteByExample(DeviceTypeExample example);
@@ -27,4 +45,7 @@ public interface DeviceTypeMapper {
     int updateByPrimaryKeySelective(DeviceType record);
 
     int updateByPrimaryKey(DeviceType record);
+
+
+
 }

@@ -7,6 +7,7 @@ import com.cskaoyan.mapper.WorkDetailMapper;
 import com.cskaoyan.mapper.WorkMapper;
 import com.cskaoyan.vo.COrderResponseVo;
 import com.cskaoyan.vo.Message;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -54,6 +55,34 @@ public class WorkController {
         return result;
     }
 
+
+    @RequestMapping("work/search_work_by_workId")
+    @ResponseBody
+    public COrderResponseVo<WorkDetail> getWorkByWorkId(@Param("searchValue") String searchValue,
+                                                           @Param("page") int page, @Param("rows") int rows){
+        int limit = rows;
+        int offset = (page - 1) * rows;
+        List<WorkDetail> workDetails = workDetailMapper.queryWorkByWorkIdInPage("%" + searchValue + "%", limit, offset);
+
+        COrderResponseVo<WorkDetail> result = new COrderResponseVo<>();
+        result.setTotal(11);
+        result.setRows(workDetails);
+        return result;
+    }
+
+    @RequestMapping("work/search_work_by_workProcess")
+    @ResponseBody
+    public COrderResponseVo<WorkDetail> getWorkByProcessId(@Param("searchValue") String searchValue,
+                                                  @Param("page") int page, @Param("rows") int rows){
+        int limit = rows;
+        int offset = (page - 1) * rows;
+        List<WorkDetail> workDetails = workDetailMapper.queryWorkByProcessIdInPage("%" + searchValue + "%", limit, offset);
+
+        COrderResponseVo<WorkDetail> result = new COrderResponseVo<>();
+        result.setTotal(11);
+        result.setRows(workDetails);
+        return result;
+    }
 
 /*
     @RequestMapping("order/add")

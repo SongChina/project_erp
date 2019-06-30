@@ -4,50 +4,57 @@ import java.util.Date;
 
 public class MaterialConsume {
     private String consumeId;
-
-    private String workId;
-
-    private String materialId;
-
-    private Integer consumeAmount;
-
+    private Work work;
+    private Material material;
+    private int consumeAmount;
     private Date consumeDate;
-
     private String sender;
-
     private String receiver;
-
     private String note;
+
+    @Override
+    public String toString() {
+        return "MaterialConsume{" +
+                "consumeId='" + consumeId + '\'' +
+                ", work=" + work +
+                ", material=" + material +
+                ", consumeAmount=" + consumeAmount +
+                ", consumeDate=" + consumeDate +
+                ", sender='" + sender + '\'' +
+                ", receiver='" + receiver + '\'' +
+                ", note='" + note + '\'' +
+                '}';
+    }
 
     public String getConsumeId() {
         return consumeId;
     }
 
     public void setConsumeId(String consumeId) {
-        this.consumeId = consumeId == null ? null : consumeId.trim();
+        this.consumeId = consumeId;
     }
 
-    public String getWorkId() {
-        return workId;
+    public Work getWork() {
+        return work;
     }
 
-    public void setWorkId(String workId) {
-        this.workId = workId == null ? null : workId.trim();
+    public void setWork(Work work) {
+        this.work = work;
     }
 
-    public String getMaterialId() {
-        return materialId;
+    public Material getMaterial() {
+        return material;
     }
 
-    public void setMaterialId(String materialId) {
-        this.materialId = materialId == null ? null : materialId.trim();
+    public void setMaterial(Material material) {
+        this.material = material;
     }
 
-    public Integer getConsumeAmount() {
+    public int getConsumeAmount() {
         return consumeAmount;
     }
 
-    public void setConsumeAmount(Integer consumeAmount) {
+    public void setConsumeAmount(int consumeAmount) {
         this.consumeAmount = consumeAmount;
     }
 
@@ -64,7 +71,7 @@ public class MaterialConsume {
     }
 
     public void setSender(String sender) {
-        this.sender = sender == null ? null : sender.trim();
+        this.sender = sender;
     }
 
     public String getReceiver() {
@@ -72,7 +79,7 @@ public class MaterialConsume {
     }
 
     public void setReceiver(String receiver) {
-        this.receiver = receiver == null ? null : receiver.trim();
+        this.receiver = receiver;
     }
 
     public String getNote() {
@@ -80,6 +87,6 @@ public class MaterialConsume {
     }
 
     public void setNote(String note) {
-        this.note = note == null ? null : note.trim();
+        this.note = note;
     }
 }

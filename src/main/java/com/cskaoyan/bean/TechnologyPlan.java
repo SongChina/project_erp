@@ -19,6 +19,17 @@ public class TechnologyPlan {
 
     private Date technologyPlanEnd;
 
+    //新增工艺名称字段
+    private String technologyName;
+
+    public String getTechnologyName() {
+        return technologyName;
+    }
+
+    public void setTechnologyName(String technologyName) {
+        this.technologyName = technologyName;
+    }
+
     public String getTechnologyPlanId() {
         return technologyPlanId;
     }

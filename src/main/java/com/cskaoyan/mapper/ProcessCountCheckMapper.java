@@ -2,8 +2,9 @@ package com.cskaoyan.mapper;
 
 import com.cskaoyan.bean.ProcessCountCheck;
 import com.cskaoyan.bean.ProcessCountCheckExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface ProcessCountCheckMapper {
     long countByExample(ProcessCountCheckExample example);
@@ -27,4 +28,9 @@ public interface ProcessCountCheckMapper {
     int updateByPrimaryKeySelective(ProcessCountCheck record);
 
     int updateByPrimaryKey(ProcessCountCheck record);
+
+    List<ProcessCountCheck> selectProcessCountCheck();
+    List<ProcessCountCheck> searchById(@Param("searchValue") String searchValue);
+    int updateNote(@Param("pCountCheckId") String pCountCheckId, @Param("note") String note);
+    int updateAll(@Param("pCountCheck") ProcessCountCheck processCountCheck);
 }

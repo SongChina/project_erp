@@ -12,6 +12,15 @@
   <select id="queryProductByPage" resultMap="BaseResultMap">
     select * from product limit #{limit} offset #{offset}
   </select>
+  <select id="queryProductByProductIdInPage" resultMap="BaseResultMap">
+    select * from product where product_id like #{searchValue} limit #{limit} offset #{offset}
+  </select>
+  <select id="queryProductByProductNameInPage" resultMap="BaseResultMap">
+    select * from product where product_name like #{searchValue} limit #{limit} offset #{offset}
+  </select>
+  <select id="queryProductByProductTypeInPage" resultMap="BaseResultMap">
+    select * from product where product_type like #{searchValue} limit #{limit} offset #{offset}
+  </select>
   <select id="queryAllProduct" resultMap="BaseResultMap">
     select * from product
   </select>

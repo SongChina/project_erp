@@ -22,6 +22,9 @@
         select * from c_order limit #{limit} offset #{offset}
     </select>
 
+    <select id="com.cskaoyan.mapper.COrderDetailMapper.querySingleCOrderDetailInCorderId" resultMap="corderMap">
+        select * from c_order where order_id = #{cOrderId}
+    </select>
     <select id="queryCOrderDetailByPageInCOrderId" resultMap="corderMap">
         select * from c_order where order_id like #{searchValue} limit #{limit} offset #{offset}
     </select>

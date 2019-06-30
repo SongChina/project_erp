@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cskaoyan.mapper.UnqualifyApplyMapper">
-  <resultMap id="BaseResultMap" type="com.cskaoyan.bean.UnqualifyApply">
+
+    <resultMap id="BaseResultMap" type="com.cskaoyan.bean.UnqualifyApply">
     <id column="unqualify_apply_id" jdbcType="VARCHAR" property="unqualifyApplyId" />
     <result column="product_id" jdbcType="VARCHAR" property="productId" />
     <result column="unqualify_item" jdbcType="VARCHAR" property="unqualifyItem" />
@@ -10,7 +11,71 @@
     <result column="emp_id" jdbcType="VARCHAR" property="empId" />
     <result column="apply_date" jdbcType="TIMESTAMP" property="applyDate" />
     <result column="note" jdbcType="VARCHAR" property="note" />
+    <result column="product_name" jdbcType="VARCHAR" property="productName" />
+    <result column="emp_name" jdbcType="VARCHAR" property="empName" />
   </resultMap>
+
+  <update id="update_all">
+        update unqualify_apply set product_id = #{unqualify.productId},
+                                   unqualify_item = #{unqualify.unqualifyItem},
+                                   unqualify_count = #{unqualify.unqualifyCount},
+                                   assembly_date = #{unqualify.assemblyDate},
+                                   emp_id = #{unqualify.empId},
+                                   apply_date = #{unqualify.applyDate},
+                                   note = #{unqualify.note}
+                                   where unqualify_apply_id = #{unqualify.unqualifyApplyId}
+    </update>
+  <update id="update_note">
+         update unqualify_apply set note = #{note} where unqualify_apply_id = #{unqualifyApplyId}
+    </update>
+  <select id="searchUnqualifyByPAgeByProductName" resultMap="BaseResultMap" >
+         select  un.unqualify_apply_id,
+ 				 un.product_id,
+ 				 un.unqualify_item,
+ 				 un.unqualify_count,
+ 				 un.assembly_date,
+ 				 un.emp_id,
+ 				 un.apply_date,
+ 				 un.note,
+ 				 p.product_name,
+ 				 e.emp_name
+ 				from unqualify_apply un
+ 				left join product p on un.product_id = p.product_id
+ 				left join employee e on un.emp_id = e.emp_id
+ 				where p.product_name LIKE '%${searchValue}%'
+    </select>
+  <select id="searchUnqualifyByUnqualifyId" resultMap="BaseResultMap" >
+        select  un.unqualify_apply_id,
+ 				un.product_id,
+ 				un.unqualify_item,
+ 				un.unqualify_count,
+ 				un.assembly_date,
+ 				un.emp_id,
+ 				un.apply_date,
+ 				un.note,
+ 				p.product_name,
+ 				e.emp_name
+ 				from unqualify_apply un
+ 				left join product p on un.product_id = p.product_id
+ 				left join employee e on un.emp_id = e.emp_id
+ 				where unqualify_apply_id LIKE '%${searchValue}%'
+    </select>
+  <select id="selectUnqualifyApply" resultMap="BaseResultMap">
+        select  un.unqualify_apply_id,
+ 				un.product_id,
+ 				un.unqualify_item,
+ 				un.unqualify_count,
+ 				un.assembly_date,
+ 				un.emp_id,
+ 				un.apply_date,
+ 				un.note,
+ 				p.product_name,
+ 				e.emp_name
+ 				from unqualify_apply un
+ 				left join product p on un.product_id = p.product_id
+ 				left join employee e on un.emp_id = e.emp_id
+  </select>
+
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">

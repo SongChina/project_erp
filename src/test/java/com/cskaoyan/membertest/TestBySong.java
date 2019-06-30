@@ -39,6 +39,9 @@ public class TestBySong {
 
     @Test
     public void selectTest(){
+        List<Product> products = productMapper.queryProductByProductIdInPage("%00%",4, 0);
+        System.out.println(products);
+
 /*        int i = mapper.deleteByPrimaryKey("1");
         System.out.println(i);*/
 
@@ -60,11 +63,13 @@ public class TestBySong {
         System.out.println(workDetails);*/
 /*        List<COrderDetail> cOrderDetails = cOrderDetailMapper.queryCOrderDetailByPageInCOrderId("%2%", 4, 0);
         System.out.println(cOrderDetails);*/
-        ArrayList<String> strings = new ArrayList<>();
+
+
+/*        ArrayList<String> strings = new ArrayList<>();
         strings.add("001");
         strings.add("002");
         List<COrderDetail> cOrderDetails = cOrderDetailMapper.queryCOrderDetailByPageInCustomIds(strings, 4,0);
-        System.out.println(cOrderDetails);
+        System.out.println(cOrderDetails);*/
 
     }
     public void fileTest(){

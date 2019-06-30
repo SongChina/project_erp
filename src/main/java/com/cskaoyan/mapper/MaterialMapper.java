@@ -12,6 +12,8 @@ public interface MaterialMapper {
 
     int deleteByPrimaryKey(String materialId);
 
+    int deleteByIds(@Param("ids") String[] ids);
+
     int insert(Material record);
 
     int insertSelective(Material record);
@@ -27,4 +29,15 @@ public interface MaterialMapper {
     int updateByPrimaryKeySelective(Material record);
 
     int updateByPrimaryKey(Material record);
+
+    int updateByMaterial(@Param("material") Material material);
+    List<Material> selectAll();
+    List<Material> selectByPage(@Param("pageSize") int pageSize, @Param("offset") int offset);
+    List<Material> queryMaterialById(@Param("materialId") String searchValue, @Param("pageSize") int pageSize, @Param("offset") int offset);
+    List<Material> queryAllMaterialById(@Param("materialId") String searchValue);
+
+    List<Material> queryMaterialByType(@Param("materialType") String searchValue, @Param("pageSize") int pageSize, @Param("offset") int offset);
+    List<Material> queryAllMaterialByType(@Param("materialType") String searchValue);
+
+
 }

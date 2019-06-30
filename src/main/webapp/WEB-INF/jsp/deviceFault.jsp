@@ -27,7 +27,7 @@
 <!-- Toolbar -->
 <div  id="toolbar_deviceFault" style=" height: 22px; padding: 3px 11px; background: #fafafa;">  
 	
-	<c:forEach items="${sessionScope.sysPermissionList}" var="per" >
+<%--	<c:forEach items="${sessionScope.sysPermissionList}" var="per" >
 		<c:if test="${per=='deviceFault:add'}">
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-add" onclick="deviceFault_add()">新增</a>  
@@ -43,13 +43,23 @@
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-cancel" onclick="deviceFault_delete()">删除</a>  
 		    </div>  
 		</c:if>
-	</c:forEach>
-	
+	</c:forEach>--%>
+	<div style="float: left;">
+		<a href="#" class="easyui-linkbutton" plain="true" icon="icon-add" onclick="deviceFault_add()">新增</a>
+	</div>
+	<div style="float: left;">
+		<a href="#" class="easyui-linkbutton" plain="true" icon="icon-edit" onclick="deviceFault_edit()">编辑</a>
+	</div>
+	<div style="float: left;">
+		<a href="#" class="easyui-linkbutton" plain="true" icon="icon-cancel" onclick="deviceFault_delete()">删除</a>
+	</div>
+
 	<div class="datagrid-btn-separator"></div>  
 	
 	<div style="float: left;">  
 		<a href="#" class="easyui-linkbutton" plain="true" icon="icon-reload" onclick="deviceFault_reload()">刷新</a>  
-	</div>  
+	</div>
+
 	
     <div id="search_deviceFault" style="float: right;">
         <input id="search_text_deviceFault" class="easyui-searchbox"  

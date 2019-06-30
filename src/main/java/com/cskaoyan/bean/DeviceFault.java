@@ -15,6 +15,17 @@ public class DeviceFault {
 
     private String deviceFaultMaintenance;
 
+    //新增字段
+    private String deviceName;
+
+    public String getDeviceName() {
+        return deviceName;
+    }
+
+    public void setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+    }
+
     public String getDeviceFaultId() {
         return deviceFaultId;
     }

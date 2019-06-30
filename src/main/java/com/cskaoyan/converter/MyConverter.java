@@ -12,6 +12,7 @@ import java.util.Date;
 public class MyConverter implements Converter<String, Date> {
     @Override
     public Date convert(String s) {
+
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date result = null;
         try {

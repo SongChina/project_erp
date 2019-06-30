@@ -1,6 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cskaoyan.mapper.DeviceMapper">
+
+  <!--自己写的resultMap-->
+  <resultMap id="deviceMap" type="com.cskaoyan.bean.Device">
+    <result column="device_id" property="deviceId"/>
+    <result column="device_name" property="deviceName"/>
+    <result column="device_type_id" property="deviceTypeId"/>
+    <result column="device_status_id" property="deviceStatusId"/>
+    <result column="device_status" property="deviceStatus"/>
+    <result column="device_purchase_date" property="devicePurchaseDate"/>
+    <result column="device_purchase_price" property="devicePurchasePrice"/>
+    <result column="device_manufacture_date" property="deviceManufactureDate"/>
+    <result column="device_service_life" property="deviceServiceLife"/>
+    <result column="device_keeper_id" property="deviceKeeperId"/>
+    <result column="note" property="note"/>
+    <result column="device_type_name" property="deviceTypeName"/>
+    <result column="emp_name" property="deviceKeeper"/>
+  </resultMap>
+
+  <!--基础查询sql语句-->
+  <sql id="basesql">
+      select
+      d.device_id,
+      d.device_name,
+      d.device_type_id,
+      d.device_status_id,
+      d.device_status,
+       d.device_purchase_date,
+       d.device_purchase_price,
+       d.device_manufacture_date,
+       d.device_service_life,
+       d.device_keeper_id,
+       d.note,
+       t.device_type_name,
+       e.emp_name
+      from device d
+      Left join device_type t on d.device_type_id = t.device_type_id
+      Left join employee e on d.device_keeper_id = e.emp_id
+  </sql>
+
+  <!--查询所有设备信息-->
+  <select id="queryDeviceList" resultMap="deviceMap">
+    <include refid="basesql"/>
+  </select>
+
+  <!--根据设备ID查询设备信息-->
+  <select id="queryDeviceById" resultMap="deviceMap">
+    <include refid="basesql"/>
+    where d.device_id like concat('%', #{searchValue}, '%')
+  </select>
+
+  <!--根据设备名称查询设备信息-->
+  <select id="queryDeviceByName" resultMap="deviceMap">
+    <include refid="basesql"/>
+    where d.device_name like concat('%', #{searchValue}, '%')
+  </select>
+
+  <!--根据设备种类名称查询设备信息-->
+  <select id="queryDeviceByDeviceTypeName" resultMap="deviceMap">
+    <include refid="basesql"/>
+    where t.device_type_name like concat('%', #{searchValue}, '%')
+  </select>
+
+  <!--修改设备介绍-->
+  <select id="updateDeviceNote" resultType="int">
+    update device set note = #{device.note} where device_id = #{device.deviceId}
+  </select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <resultMap id="BaseResultMap" type="com.cskaoyan.bean.Device">
     <id column="device_id" jdbcType="VARCHAR" property="deviceId" />
     <result column="device_name" jdbcType="VARCHAR" property="deviceName" />

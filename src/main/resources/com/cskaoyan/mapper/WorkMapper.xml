@@ -9,6 +9,9 @@
     <result column="device_id" jdbcType="VARCHAR" property="deviceId" />
     <result column="rating" jdbcType="INTEGER" property="rating" />
   </resultMap>
+
+
+
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">

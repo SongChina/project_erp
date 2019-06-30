@@ -1,6 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cskaoyan.mapper.DeviceFaultMapper">
+
+  <!--自己写的resultMap-->
+  <resultMap id="DeviceFaultMap" type="com.cskaoyan.bean.DeviceFault">
+    <result column="device_fault_id" jdbcType="VARCHAR" property="deviceFaultId" />
+    <result column="device_id" jdbcType="VARCHAR" property="deviceId" />
+    <result column="device_fault_cause" jdbcType="VARCHAR" property="deviceFaultCause" />
+    <result column="device_fault_detail" jdbcType="VARCHAR" property="deviceFaultDetail" />
+    <result column="device_fault_date" jdbcType="TIMESTAMP" property="deviceFaultDate" />
+    <result column="device_fault_maintenance" jdbcType="VARCHAR" property="deviceFaultMaintenance" />
+    <result column="device_name" jdbcType="VARCHAR" property="deviceName" />
+  </resultMap>
+
+  <!--sql基本字段-->
+  <sql id="BaseSql">
+    SELECT
+      device_fault_id,
+     df.device_id,
+     device_fault_cause,
+     device_fault_detail,
+     device_fault_date,
+     device_fault_maintenance,
+	device_name
+	FROM device_fault df
+	LEFT JOIN device d ON df. device_id = d.device_id
+  </sql>
+
+  <!--查询所有设备故障信息-->
+  <select id="queryDeviceFaultList" resultMap="DeviceFaultMap">
+    <include refid="BaseSql"/>
+  </select>
+
+  <!--通过设备故障id查询设备故障信息-->
+  <select id="queryDeviceFaultById" resultMap="DeviceFaultMap">
+
+    <include refid="BaseSql"/>
+    where device_fault_id like concat('%', #{searchValue}, '%')
+  </select>
+
+  <!--通过设备名称查询设备故障信息-->
+  <select id="queryDeviceFaultByDeviceName" resultMap="DeviceFaultMap">
+    <include refid="BaseSql"/>
+    where d.device_name like concat('%', #{searchValue}, '%')
+  </select>
+
+  <!--修改故障描述-->
+  <select id="updateDeviceFaultDetail">
+    update device_fault
+    set device_fault_detail = #{deviceFault.deviceFaultDetail}
+    where device_fault_id = #{deviceFault.deviceFaultId}
+  </select>
+
+
+
   <resultMap id="BaseResultMap" type="com.cskaoyan.bean.DeviceFault">
     <id column="device_fault_id" jdbcType="VARCHAR" property="deviceFaultId" />
     <result column="device_id" jdbcType="VARCHAR" property="deviceId" />

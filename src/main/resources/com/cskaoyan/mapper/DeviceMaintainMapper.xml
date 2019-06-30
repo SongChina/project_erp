@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cskaoyan.mapper.DeviceMaintainMapper">
+
+  <!--自己写的resultMap-->
+  <resultMap id="DeviceMaintainMap" type="com.cskaoyan.bean.DeviceMaintain">
+    <result column="device_maintain_id" jdbcType="VARCHAR" property="deviceMaintainId" />
+    <result column="device_fault_id" jdbcType="VARCHAR" property="deviceFaultId" />
+    <result column="device_maintain_emp_id" jdbcType="VARCHAR" property="deviceMaintainEmpId" />
+    <result column="device_maintain_date" jdbcType="TIMESTAMP" property="deviceMaintainDate" />
+    <result column="device_maintain_result" jdbcType="VARCHAR" property="deviceMaintainResult" />
+    <result column="device_maintain_cost" jdbcType="DECIMAL" property="deviceMaintainCost" />
+    <result column="note" jdbcType="VARCHAR" property="note" />
+    <result column="emp_name" jdbcType="VARCHAR" property="deviceMaintainEmp" />
+  </resultMap>
+
+  <!--查询sql语句-->
+    <sql id="BaseSql">
+        SELECT
+	device_maintain_id,
+	device_fault_id,
+	device_maintain_emp_id,
+	device_maintain_date,
+    device_maintain_result,
+	device_maintain_cost,
+	note,
+	emp_name
+	FROM device_maintain dm
+	LEFT JOIN employee e ON dm.device_maintain_emp_id = e.emp_id
+    </sql>
+
+    <!--查询所有设备维修信息-->
+    <select id="queryDevicMaintainList" resultMap="DeviceMaintainMap">
+      <include refid="BaseSql"/>
+    </select>
+
+  <!--通过设备维修编号查询设备维修信息-->
+  <select id="queryDeviceMaintainById" resultMap="DeviceMaintainMap">
+    <include refid="BaseSql"/>
+    where device_maintain_id like concat('%', #{searchValue}, '%')
+  </select>
+  <!--通过故障编号查询设备维修信息-->
+  <select id="queryDeviceMaintainByDeviceFaultId" resultMap="DeviceMaintainMap">
+    <include refid="BaseSql"/>
+    where device_fault_id like concat('%', #{searchValue}, '%')
+  </select>
+
+  <!--修改维修备注-->
+  <select id="updateDeviceMaintainNote">
+    update device_maintain
+    set note = #{deviceMaintain.note}
+    where device_maintain_id = #{deviceMaintain.deviceMaintainId}
+  </select>
+
+
   <resultMap id="BaseResultMap" type="com.cskaoyan.bean.DeviceMaintain">
     <id column="device_maintain_id" jdbcType="VARCHAR" property="deviceMaintainId" />
     <result column="device_fault_id" jdbcType="VARCHAR" property="deviceFaultId" />

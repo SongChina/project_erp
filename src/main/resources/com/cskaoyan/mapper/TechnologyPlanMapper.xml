@@ -10,7 +10,56 @@
     <result column="commit_plan" jdbcType="TIMESTAMP" property="commitPlan" />
     <result column="technology_plan_start" jdbcType="TIMESTAMP" property="technologyPlanStart" />
     <result column="technology_plan_end" jdbcType="TIMESTAMP" property="technologyPlanEnd" />
+    <result column="technology_name" jdbcType="VARCHAR" property="technologyName"/>
   </resultMap>
+
+  <select id="findAllTechnologyPlan"  resultMap="BaseResultMap">
+	SELECT
+		technology_plan_id,
+		technology_plan.technology_id,
+		technology_name,
+		batch_amount,
+		start_plan,
+		end_plan,
+		commit_plan,
+		technology_plan_start,
+		technology_plan_end
+	FROM
+		technology_plan
+	LEFT JOIN technology ON technology.technology_id = technology_plan.technology_id
+</select>
+
+  <!--通过工艺名称查询-->
+<select id="selectByTechnologyName" resultMap="BaseResultMap">
+	SELECT
+		technology_plan_id,
+		technology_plan.technology_id,
+		technology_name,
+		batch_amount,
+		start_plan,
+		end_plan,
+		commit_plan,
+		technology_plan_start,
+		technology_plan_end
+	FROM
+		technology_plan
+	LEFT JOIN technology ON technology.technology_id = technology_plan.technology_id
+   where technology_name like concat('%', #{searchValue}, '%')
+</select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">

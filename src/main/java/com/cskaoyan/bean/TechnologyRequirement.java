@@ -7,7 +7,17 @@ public class TechnologyRequirement {
 
     private String technologyId;
 
+    private String technologyName;
+
     private String requirement;
+
+    public String getTechnologyName() {
+        return technologyName;
+    }
+
+    public void setTechnologyName(String technologyName) {
+        this.technologyName = technologyName;
+    }
 
     private Date addTime;
 

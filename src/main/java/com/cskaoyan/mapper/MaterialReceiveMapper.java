@@ -1,30 +1,43 @@
 package com.cskaoyan.mapper;
 
+import com.cskaoyan.bean.MaterialConsumeExample;
 import com.cskaoyan.bean.MaterialReceive;
 import com.cskaoyan.bean.MaterialReceiveExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface MaterialReceiveMapper {
-    long countByExample(MaterialReceiveExample example);
+    long countByExample();
 
-    int deleteByExample(MaterialReceiveExample example);
+    int deleteByExample(MaterialConsumeExample example);
 
-    int deleteByPrimaryKey(String receiveId);
+    int deleteByPrimaryKey(String consumeId);
 
     int insert(MaterialReceive record);
 
-    int insertSelective(MaterialReceive record);
 
-    List<MaterialReceive> selectByExample(MaterialReceiveExample example);
+   // List<MaterialReceive> selectByExample(MaterialConsumeExample example);
 
-    MaterialReceive selectByPrimaryKey(String receiveId);
+    MaterialReceive selectByPrimaryKey(String consumeId);//要用
 
-    int updateByExampleSelective(@Param("record") MaterialReceive record, @Param("example") MaterialReceiveExample example);
+   // int updateByExampleSelective(@Param("record") MaterialReceive record, @Param("example") MaterialConsumeExample example);
 
-    int updateByExample(@Param("record") MaterialReceive record, @Param("example") MaterialReceiveExample example);
+    //int updateByExample(@Param("record") MaterialReceive record, @Param("example") MaterialConsumeExample example);
 
-    int updateByPrimaryKeySelective(MaterialReceive record);
+    //int updateByPrimaryKey(MaterialReceive record);
 
-    int updateByPrimaryKey(MaterialReceive record);
+    int insertSelective(MaterialReceive record);//增
+    int deleteByIds(@Param("ids") String[] ids);//删
+    int update(MaterialReceive record);//改
+
+    //查
+    List<MaterialReceive> selectAll();
+    List<MaterialReceive> selectByPage(@Param("pageSize") int pageSize, @Param("offset") int offset);
+    List<MaterialReceive> queryReceiveById(@Param("receiveId") String searchValue, @Param("pageSize") int pageSize, @Param("offset") int offset);
+    List<MaterialReceive> queryAllReceiveById(@Param("receiveId") String searchValue);
+
+    List<MaterialReceive> queryReceiveByMaterialId(@Param("materialId") String searchValue, @Param("pageSize") int pageSize, @Param("offset") int offset);
+    List<MaterialReceive> queryAllReceiveByMaterialId(@Param("materialId") String searchValue);
+
+
 }

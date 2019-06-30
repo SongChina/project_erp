@@ -26,6 +26,27 @@ public class Device {
 
     private String note;
 
+    //新增字段
+    private String deviceTypeName;
+
+    private String deviceKeeper;
+
+    public String getDeviceTypeName() {
+        return deviceTypeName;
+    }
+
+    public void setDeviceTypeName(String deviceTypeName) {
+        this.deviceTypeName = deviceTypeName;
+    }
+
+    public String getDeviceKeeper() {
+        return deviceKeeper;
+    }
+
+    public void setDeviceKeeper(String deviceKeeper) {
+        this.deviceKeeper = deviceKeeper;
+    }
+
     public String getDeviceId() {
         return deviceId;
     }
@@ -112,5 +133,41 @@ public class Device {
 
     public void setNote(String note) {
         this.note = note == null ? null : note.trim();
+    }
+
+    public Device() {
+    }
+
+    public Device(String deviceId, String deviceName, String deviceTypeId, String deviceStatusId, String deviceStatus, Date devicePurchaseDate, BigDecimal devicePurchasePrice, Date deviceManufactureDate, Date deviceServiceLife, String deviceKeeperId, String note) {
+        this.deviceId = deviceId;
+        this.deviceName = deviceName;
+        this.deviceTypeId = deviceTypeId;
+        this.deviceStatusId = deviceStatusId;
+        this.deviceStatus = deviceStatus;
+        this.devicePurchaseDate = devicePurchaseDate;
+        this.devicePurchasePrice = devicePurchasePrice;
+        this.deviceManufactureDate = deviceManufactureDate;
+        this.deviceServiceLife = deviceServiceLife;
+        this.deviceKeeperId = deviceKeeperId;
+        this.note = note;
+    }
+
+    @Override
+    public String toString() {
+        return "Device{" +
+                "deviceId='" + deviceId + '\'' +
+                ", deviceName='" + deviceName + '\'' +
+                ", deviceTypeId='" + deviceTypeId + '\'' +
+                ", deviceStatusId='" + deviceStatusId + '\'' +
+                ", deviceStatus='" + deviceStatus + '\'' +
+                ", devicePurchaseDate=" + devicePurchaseDate +
+                ", devicePurchasePrice=" + devicePurchasePrice +
+                ", deviceManufactureDate=" + deviceManufactureDate +
+                ", deviceServiceLife=" + deviceServiceLife +
+                ", deviceKeeperId='" + deviceKeeperId + '\'' +
+                ", note='" + note + '\'' +
+                ", deviceTypeName='" + deviceTypeName + '\'' +
+                ", deviceKeeper='" + deviceKeeper + '\'' +
+                '}';
     }
 }

@@ -10,7 +10,63 @@
     <result column="emp_id" jdbcType="VARCHAR" property="empId" />
     <result column="result" jdbcType="VARCHAR" property="result" />
     <result column="note" jdbcType="VARCHAR" property="note" />
+    <result column="emp_name" jdbcType="VARCHAR" property="empName" />
   </resultMap>
+
+  <update id="update_all">
+        update final_measuret_check set  order_id = #{measure.orderId},
+                                        check_item = #{measure.checkItem},
+                                        cdate = #{measure.cdate},
+                                        measure_data = #{measure.measureData},
+                                        emp_id = #{measure.empId},
+                                        result = #{measure.result},
+                                        note = #{measure.note}
+                                        where f_measure_check_id = #{measure.fMeasureCheckId}
+    </update>
+  <update id="update_note">
+         update final_measuret_check set note = #{note} where f_measure_check_id = #{fMeasureCheckId}
+    </update>
+  <select id="searchfMeasureCheckByOrderId" resultMap="BaseResultMap">
+        select  fm.f_measure_check_id,
+                fm.order_id,
+ 				fm.check_item,
+ 				fm.cdate,
+ 				fm.measure_data,
+ 				fm.emp_id,
+ 				e.emp_name,
+ 				fm.result,
+ 				fm.note
+ 				from final_measuret_check fm
+ 				left join employee e on fm.emp_id = e.emp_id
+ 				where order_id LIKE '%${searchValue}%'
+    </select>
+  <select id="searchfMeasureCheckByfMeasureCheckId" resultMap="BaseResultMap">
+        select  fm.f_measure_check_id,
+                fm.order_id,
+ 				fm.check_item,
+ 				fm.cdate,
+ 				fm.measure_data,
+ 				fm.emp_id,
+ 				e.emp_name,
+ 				fm.result,
+ 				fm.note
+ 				from final_measuret_check fm
+ 				left join employee e on fm.emp_id = e.emp_id
+ 				where f_measure_check_id LIKE '%${searchValue}%'
+    </select>
+  <select id="selectFinalMeasuretCheck" resultMap="BaseResultMap" >
+        select  fm.f_measure_check_id,
+                fm.order_id,
+ 				fm.check_item,
+ 				fm.cdate,
+ 				fm.measure_data,
+ 				fm.emp_id,
+ 				e.emp_name,
+ 				fm.result,
+ 				fm.note
+ 				from final_measuret_check fm
+ 				left join employee e on fm.emp_id = e.emp_id
+    </select>
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">

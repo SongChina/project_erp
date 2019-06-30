@@ -6,6 +6,15 @@ import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface TechnologyPlanMapper {
+
+    //新增方法
+    //查询所有工艺计划
+    List<TechnologyPlan> findAllTechnologyPlan();
+
+    //按工艺名称查询
+    List<TechnologyPlan> selectByTechnologyName(@Param("searchValue") String searchValue);
+
+
     long countByExample(TechnologyPlanExample example);
 
     int deleteByExample(TechnologyPlanExample example);
@@ -27,4 +36,7 @@ public interface TechnologyPlanMapper {
     int updateByPrimaryKeySelective(TechnologyPlan record);
 
     int updateByPrimaryKey(TechnologyPlan record);
+
+
+
 }
