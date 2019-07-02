@@ -2,9 +2,10 @@ package com.cskaoyan.mapper;
 
 import com.cskaoyan.bean.MaterialConsumeExample;
 import com.cskaoyan.bean.MaterialReceive;
-import com.cskaoyan.bean.MaterialReceiveExample;
-import java.util.List;
+import com.cskaoyan.bean.MaterialReceive2;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface MaterialReceiveMapper {
     long countByExample();
@@ -13,7 +14,7 @@ public interface MaterialReceiveMapper {
 
     int deleteByPrimaryKey(String consumeId);
 
-    int insert(MaterialReceive record);
+    //int insert(MaterialReceive record);
 
 
    // List<MaterialReceive> selectByExample(MaterialConsumeExample example);
@@ -26,9 +27,9 @@ public interface MaterialReceiveMapper {
 
     //int updateByPrimaryKey(MaterialReceive record);
 
-    int insertSelective(MaterialReceive record);//增
+    int insertSelective(MaterialReceive2 record);//增
     int deleteByIds(@Param("ids") String[] ids);//删
-    int update(MaterialReceive record);//改
+    int update(MaterialReceive2 record);//改
 
     //查
     List<MaterialReceive> selectAll();

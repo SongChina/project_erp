@@ -1,8 +1,9 @@
-package com.cskaoyan.service.material.material_impl;
+package com.cskaoyan.service.impl;
 
 import com.cskaoyan.bean.MaterialReceive;
+import com.cskaoyan.bean.MaterialReceive2;
 import com.cskaoyan.mapper.MaterialReceiveMapper;
-import com.cskaoyan.service.material.MaterialReceiveService;
+import com.cskaoyan.service.MaterialReceiveService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +22,7 @@ public class MaterialReceiveServiceImpl implements MaterialReceiveService {
     }
 
     @Override
-    public int insert(MaterialReceive materialReceive) {
+    public int insert(MaterialReceive2 materialReceive) {
         int i = materialReceiveMapper.insertSelective(materialReceive);
         return i;
     }
@@ -33,7 +34,7 @@ public class MaterialReceiveServiceImpl implements MaterialReceiveService {
     }
 
     @Override
-    public int updateReceive(MaterialReceive materialReceive) {
+    public int updateReceive(MaterialReceive2 materialReceive) {
         int update = materialReceiveMapper.update(materialReceive);
         return update;
     }

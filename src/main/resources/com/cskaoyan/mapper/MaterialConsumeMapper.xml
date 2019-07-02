@@ -16,12 +16,26 @@
       <result column="material_id"  property="materialId" />
     </collection>
   </resultMap>
+    <resultMap id="ConsumeMap" type="com.cskaoyan.bean.MaterialConsume2">
+        <id column="consume_id"  property="consumeId" />
+        <result column="work_id"  property="workId" />
+        <result column="material_id"  property="materialId" />
+        <result column="consume_amount"  property="consumeAmount" />
+        <result column="consume_date"  property="consumeDate" />
+        <result column="sender"  property="sender" />
+        <result column="receiver" property="receiver" />
+        <result column="note" property="note" />
+    </resultMap>
   <select id="countByExample"  resultType="java.lang.Long">
     select count(*) from material_consume
   </select>
-  <insert id="insertSelective" parameterType="com.cskaoyan.bean.MaterialConsume">
+  <insert id="insertSelective" parameterType="com.cskaoyan.bean.MaterialConsume2">
     insert into material_consume
-    <trim prefix="(" suffix=")" suffixOverrides=",">
+    (consume_id,work_id,material_id,consume_amount,consume_date,sender,receiver,note)
+    values(#{consumeId},#{workId}, #{materialId}, #{consumeAmount},
+    #{consumeDate},#{sender}, #{receiver}, #{note})
+    </insert>
+    <!--<trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="consumeId != null">
         consume_id,
       </if>
@@ -73,21 +87,33 @@
         #{note},
       </if>
     </trim>
-  </insert>
-  <update id="update" parameterType="com.cskaoyan.bean.MaterialConsume">
+  </insert>-->
+  <!--<update id="update" parameterType="com.cskaoyan.bean.MaterialConsume2">
+    update  material_consume
+    set
+        work_id = #{workId},
+        material_id = #{materialId},
+        consume_amount = #{consumeAmount},
+        consume_date = #{consumeDate},
+        sender = #{sender},
+        receiver = #{receiver},
+        note = #{note}
+    where consume_id = #{consumeId}
+  </update>-->
+  <update id="update" parameterType="com.cskaoyan.bean.MaterialConsume2">
     update  material_consume
     <set>
-      <if test="work.workId != null">
-        work_id = #{work.workId},
+      <if test="workId != null">
+        work_id = #{workId},
       </if>
-      <if test="material.materialId != null">
-        material_id = #{material.materialId},
+      <if test="materialId != null">
+        material_id = #{materialId},
       </if>
       <if test="consumeAmount != null">
         consume_amount = #{consumeAmount},
       </if>
       <if test="consumeDate != null">
-        consume_date = #{consumeDate},
+        consume_date = #{consumeDate,},
       </if>
       <if test="sender != null">
         sender = #{sender},

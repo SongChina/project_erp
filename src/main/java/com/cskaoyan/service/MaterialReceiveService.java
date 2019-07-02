@@ -1,15 +1,16 @@
-package com.cskaoyan.service.material;
+package com.cskaoyan.service;
 
 import com.cskaoyan.bean.MaterialReceive;
+import com.cskaoyan.bean.MaterialReceive2;
 
 import java.util.List;
 
 public interface MaterialReceiveService {
     int getReceiveTotal();
 
-    int insert(MaterialReceive materialReceive);
+    int insert(MaterialReceive2 materialReceive);
     int deleteReceiveByIds(String[] ids);
-    int updateReceive(MaterialReceive materialReceive);
+    int updateReceive(MaterialReceive2 materialReceive);
     MaterialReceive selectById(String receiveId);
 
     List<MaterialReceive> selectAll();

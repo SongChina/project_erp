@@ -1,10 +1,9 @@
-package com.cskaoyan.controller.material_module;
+package com.cskaoyan.controller.material;
 
 import com.cskaoyan.bean.Material;
-
-import com.cskaoyan.service.material.MaterialService;
-import com.cskaoyan.vo.material_vo.ResponseVo;
-import com.cskaoyan.vo.material_vo.StatusVo;
+import com.cskaoyan.service.MaterialService;
+import com.cskaoyan.vo.materialVo.ResponseVo;
+import com.cskaoyan.vo.materialVo.StatusVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;

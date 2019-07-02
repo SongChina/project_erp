@@ -1,10 +1,10 @@
-package com.cskaoyan.controller.material_module;
+package com.cskaoyan.controller.material;
 
 import com.cskaoyan.bean.MaterialReceive;
-
-import com.cskaoyan.service.material.MaterialReceiveService;
-import com.cskaoyan.vo.material_vo.ResponseVo;
-import com.cskaoyan.vo.material_vo.StatusVo;
+import com.cskaoyan.bean.MaterialReceive2;
+import com.cskaoyan.service.MaterialReceiveService;
+import com.cskaoyan.vo.materialVo.ResponseVo;
+import com.cskaoyan.vo.materialVo.StatusVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -48,7 +48,7 @@ public class MaterialReceiveController {
 
     @RequestMapping("insert")
     @ResponseBody
-    public StatusVo add(MaterialReceive materialReceive) {
+    public StatusVo add(MaterialReceive2 materialReceive) {
         StatusVo statusVo = new StatusVo();
         try {
             materialReceiveService.insert(materialReceive);
@@ -106,7 +106,7 @@ public class MaterialReceiveController {
 
     @RequestMapping("update_all")
     @ResponseBody
-    public StatusVo update(MaterialReceive materialReceive) {
+    public StatusVo update(MaterialReceive2 materialReceive) {
         StatusVo statusVo = new StatusVo();
         try {
             materialReceiveService.updateReceive(materialReceive);
@@ -117,7 +117,7 @@ public class MaterialReceiveController {
         } catch (Exception e) {
             e.printStackTrace();
             statusVo.setStatus(101);
-            statusVo.setMsg("修改物料收入备注失败");
+            statusVo.setMsg("修改物料收入信息失败");
             statusVo.setData(null);
             return statusVo;
         }
@@ -151,7 +151,7 @@ public class MaterialReceiveController {
     //详情备注修改update_note
     @RequestMapping("update_note")
     @ResponseBody
-    public StatusVo updateNote(MaterialReceive materialRecvive) {
+    public StatusVo updateNote(MaterialReceive2 materialRecvive) {
         return update(materialRecvive);
     }
 

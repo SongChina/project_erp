@@ -2,10 +2,10 @@ package com.cskaoyan.bean;
 
 import java.util.Date;
 
-public class MaterialConsume {
+public class MaterialConsume2 {
     private String consumeId;
-    private Work work;
-    private Material material;
+    private String workId;
+    private String materialId;
     private Integer consumeAmount;
     private Date consumeDate;
     private String sender;
@@ -14,10 +14,10 @@ public class MaterialConsume {
 
     @Override
     public String toString() {
-        return "MaterialConsume{" +
+        return "MaterialConsume2{" +
                 "consumeId='" + consumeId + '\'' +
-                ", work=" + work +
-                ", material=" + material +
+                ", workId='" + workId + '\'' +
+                ", materialId='" + materialId + '\'' +
                 ", consumeAmount=" + consumeAmount +
                 ", consumeDate=" + consumeDate +
                 ", sender='" + sender + '\'' +
@@ -34,20 +34,20 @@ public class MaterialConsume {
         this.consumeId = consumeId;
     }
 
-    public Work getWork() {
-        return work;
+    public String getWorkId() {
+        return workId;
     }
 
-    public void setWork(Work work) {
-        this.work = work;
+    public void setWorkId(String workId) {
+        this.workId = workId;
     }
 
-    public Material getMaterial() {
-        return material;
+    public String getMaterialId() {
+        return materialId;
     }
 
-    public void setMaterial(Material material) {
-        this.material = material;
+    public void setMaterialId(String materialId) {
+        this.materialId = materialId;
     }
 
     public Integer getConsumeAmount() {

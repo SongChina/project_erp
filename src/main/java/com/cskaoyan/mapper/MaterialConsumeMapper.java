@@ -2,11 +2,11 @@ package com.cskaoyan.mapper;
 
 
 import com.cskaoyan.bean.MaterialConsume;
+import com.cskaoyan.bean.MaterialConsume2;
 import com.cskaoyan.bean.MaterialConsumeExample;
-import java.util.List;
-
-
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 
 public interface MaterialConsumeMapper {
@@ -30,9 +30,9 @@ public interface MaterialConsumeMapper {
 
     int updateByPrimaryKey(MaterialConsume record);
 
-    int insertSelective(MaterialConsume record);//增
+    int insertSelective(MaterialConsume2 record);//增
     int deleteByIds(@Param("ids") String[] ids);//删
-    int update(MaterialConsume record);//改
+    int update(MaterialConsume2 record);//改
 
     //查
     List<MaterialConsume> selectAll();

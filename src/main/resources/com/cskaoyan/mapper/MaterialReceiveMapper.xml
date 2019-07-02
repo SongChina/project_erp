@@ -15,8 +15,16 @@
     <select id="countByExample" resultType="java.lang.Long">
     select count(*) from material_receive
   </select>
-
-    <insert id="insertSelective" parameterType="com.cskaoyan.bean.MaterialReceive">
+    <insert id="insertSelective" parameterType="com.cskaoyan.bean.MaterialReceive2">
+    insert into material_receive
+    (receive_id, material_id, amount,
+      receive_date, sender, receiver,
+      note)
+    values (#{receiveId,jdbcType=VARCHAR}, #{materialId,jdbcType=VARCHAR}, #{amount,jdbcType=INTEGER},
+      #{receiveDate,jdbcType=TIMESTAMP}, #{sender,jdbcType=VARCHAR}, #{receiver,jdbcType=VARCHAR},
+      #{note,jdbcType=VARCHAR})
+  </insert>
+    <!--<insert id="insertSelective" parameterType="com.cskaoyan.bean.MaterialReceive">
         insert into material_receive
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="receiveId != null">
@@ -64,9 +72,32 @@
                 #{note,jdbcType=VARCHAR},
             </if>
         </trim>
-    </insert>
-
-    <update id="update" parameterType="com.cskaoyan.bean.MaterialReceive">
+    </insert>-->
+    <update id="update" parameterType="com.cskaoyan.bean.MaterialReceive2">
+        update material_receive
+        <set>
+            <if test="materialId != null">
+                material_id = #{materialId},
+            </if>
+            <if test="amount != null">
+                amount = #{amount},
+            </if>
+            <if test="receiveDate != null">
+                receive_date = #{receiveDate},
+            </if>
+            <if test="sender != null">
+                sender = #{sender},
+            </if>
+            <if test="receiver != null">
+                receiver = #{receiver},
+            </if>
+            <if test="note != null">
+                note = #{note},
+            </if>
+        </set>
+        where receive_id = #{receiveId}
+    </update>
+    <!--<update id="update" parameterType="com.cskaoyan.bean.MaterialReceive">
         update material_receive
         <set>
             <if test="material.materialId != null">
@@ -89,7 +120,7 @@
             </if>
         </set>
         where receive_id = #{receiveId,jdbcType=VARCHAR}
-    </update>
+    </update>-->
     <delete id="deleteByIds">
         delete from material_receive where receive_id in
         <foreach collection="ids" item="id" separator="," open="(" close=")">

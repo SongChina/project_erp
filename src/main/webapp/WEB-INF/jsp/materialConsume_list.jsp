@@ -24,29 +24,29 @@
 </table>
 
 <div  id="toolbar_materialConsume" style=" height: 22px; padding: 3px 11px; background: #fafafa;">  
-	
-<%--	<c:forEach items="${sessionScope.sysPermissionList}" var="per" >--%>
-<%--		<c:if test="${per=='materialConsume:add' }" >--%>
+	<%----%>
+	<%--<c:forEach items="${sessionScope.sysPermissionList}" var="per" >--%>
+		<%--<c:if test="${per=='materialConsume:add' }" >--%>
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-add" onclick="materialConsume_add()">
 					新增
 				</a>
 		    </div>  
-<%--		</c:if>--%>
-<%--		<c:if test="${per=='materialConsume:edit' }" >--%>
+		<%--</c:if>--%>
+		<%--<c:if test="${per=='materialConsume:edit' }" >--%>
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-edit" onclick="materialConsume_edit()">
 					编辑
 				</a>
 		    </div>  
-<%--		</c:if>--%>
-<%--		<c:if test="${per=='materialConsume:delete' }" >--%>
+		<%--</c:if>--%>
+		<%--<c:if test="${per=='materialConsume:delete' }" >--%>
 		    <div style="float: left;">  
 		        <a href="#" class="easyui-linkbutton" plain="true" icon="icon-cancel"
 				   onclick="materialConsume_delete()">删除</a>
 		    </div>  
-<%--		</c:if>--%>
-<%--	</c:forEach>--%>
+		<%--</c:if>
+	</c:forEach>--%>
 	
 	<div class="datagrid-btn-separator"></div>  
 	
@@ -194,7 +194,7 @@
 				{field : 'ck', checkbox:true },
 				{field : 'consumeId', width : 100, title : '物料消耗编号', align:'center'},
 				{field : 'work', width : 100, align : 'center', title : '所属作业', formatter:formatWork},
-				{field : 'material', width : 100, align : 'center', title : '物料', formatter:formatMaterial},
+				{field : 'material.', width : 100, align : 'center', title : '物料', formatter:formatMaterial},
 				{field : 'consumeAmount', width : 100, title : '消耗数量', align:'center'},
 				{field : 'consumeDate', width : 130, title : '消耗日期', align:'center',
 					formatter:TAOTAO.formatDateTime},

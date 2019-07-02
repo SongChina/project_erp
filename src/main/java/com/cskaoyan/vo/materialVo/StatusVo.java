@@ -1,4 +1,4 @@
-package com.cskaoyan.vo.material_vo;
+package com.cskaoyan.vo.materialVo;
 
 public class StatusVo {
     int status;

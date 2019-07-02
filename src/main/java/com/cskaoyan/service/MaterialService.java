@@ -1,7 +1,6 @@
-package com.cskaoyan.service.material;
+package com.cskaoyan.service;
 
 import com.cskaoyan.bean.Material;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 

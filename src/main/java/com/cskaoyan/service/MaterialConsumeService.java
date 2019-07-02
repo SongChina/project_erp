@@ -1,8 +1,7 @@
-package com.cskaoyan.service.material;
+package com.cskaoyan.service;
 
 import com.cskaoyan.bean.MaterialConsume;
-import com.cskaoyan.bean.Work;
-import org.apache.ibatis.annotations.Param;
+import com.cskaoyan.bean.MaterialConsume2;
 
 import java.util.List;
 
@@ -10,9 +9,9 @@ public interface MaterialConsumeService {
     int getConsumeTotal();
     //List<MaterialConsume> getConsumeList();
 
-    int insert(MaterialConsume materialConsume);
+    int insert(MaterialConsume2 materialConsume);
     int deleteConsumeByIds(String[] ids);
-    int updateConsume(MaterialConsume materialConsume);
+    int updateConsume(MaterialConsume2 materialConsume);
     MaterialConsume selectById(String consumeId);
 
     List<MaterialConsume> selectAll();

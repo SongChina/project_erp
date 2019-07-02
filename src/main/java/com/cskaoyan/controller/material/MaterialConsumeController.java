@@ -1,12 +1,11 @@
-package com.cskaoyan.controller.material_module;
+package com.cskaoyan.controller.material;
 
 import com.cskaoyan.bean.MaterialConsume;
-
+import com.cskaoyan.bean.MaterialConsume2;
 import com.cskaoyan.mapper.MaterialConsumeMapper;
-
-import com.cskaoyan.service.material.MaterialConsumeService;
-import com.cskaoyan.vo.material_vo.ResponseVo;
-import com.cskaoyan.vo.material_vo.StatusVo;
+import com.cskaoyan.service.MaterialConsumeService;
+import com.cskaoyan.vo.materialVo.ResponseVo;
+import com.cskaoyan.vo.materialVo.StatusVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,10 +28,10 @@ public class MaterialConsumeController {
 
     @RequestMapping("list")
     @ResponseBody
-    public com.cskaoyan.vo.material_vo.ResponseVo<MaterialConsume> getConsumeList(int page, int rows) {
+    public ResponseVo<MaterialConsume> getConsumeList(int page, int rows) {
         int total = (int) materialConsumeService.getConsumeTotal();
         List<MaterialConsume> consomelist = materialConsumeService.queryConsumesByPage(page, rows);
-        com.cskaoyan.vo.material_vo.ResponseVo<MaterialConsume> ResponseVo = new com.cskaoyan.vo.material_vo.ResponseVo<>();
+        ResponseVo<MaterialConsume> ResponseVo = new ResponseVo<>();
         ResponseVo.setTotal(total);
         ResponseVo.setRows(consomelist);
         return ResponseVo;
@@ -52,7 +51,7 @@ public class MaterialConsumeController {
 
     @RequestMapping("insert")
     @ResponseBody
-    public StatusVo add(MaterialConsume materialConsume) {
+    public StatusVo add(MaterialConsume2 materialConsume) {
         StatusVo statusVo = new StatusVo();
         try {
             materialConsumeService.insert(materialConsume);
@@ -110,7 +109,7 @@ public class MaterialConsumeController {
 
     @RequestMapping("update_all")
     @ResponseBody
-    public StatusVo update(MaterialConsume materialConsume) {
+    public StatusVo update(MaterialConsume2 materialConsume) {
         StatusVo statusVo = new StatusVo();
         try {
             materialConsumeService.updateConsume(materialConsume);
@@ -121,7 +120,7 @@ public class MaterialConsumeController {
         } catch (Exception e) {
             e.printStackTrace();
             statusVo.setStatus(101);
-            statusVo.setMsg("修改物料消耗备注失败");
+            statusVo.setMsg("修改物料消耗信息失败");
             statusVo.setData(null);
             return statusVo;
         }
@@ -166,7 +165,7 @@ public class MaterialConsumeController {
     //详情备注修改update_note
     @RequestMapping("update_note")
     @ResponseBody
-    public StatusVo updateNote(MaterialConsume material) {
+    public StatusVo updateNote(MaterialConsume2 material) {
         return update(material);
     }
 

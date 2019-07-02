@@ -1,10 +1,10 @@
-package com.cskaoyan.service.material.material_impl;
+package com.cskaoyan.service.impl;
 
 
 import com.cskaoyan.bean.Material;
 import com.cskaoyan.bean.MaterialExample;
 import com.cskaoyan.mapper.MaterialMapper;
-import com.cskaoyan.service.material.MaterialService;
+import com.cskaoyan.service.MaterialService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,14 +35,14 @@ public class MaterialServiceImpl implements MaterialService {
         return materials;
     }
     @Override
-    public List<Material> queryMaterialById(String searchValue,int page, int pageSize) {
+    public List<Material> queryMaterialById(String searchValue, int page, int pageSize) {
         int offset = (int) Math.ceil(pageSize*(page-1));
         String materialId = "%"+searchValue+"%";
         return materialMapper.queryMaterialById(materialId,pageSize,offset);
     }
 
     @Override
-    public List<Material> queryMaterialByType(String searchValue,int page, int pageSize) {
+    public List<Material> queryMaterialByType(String searchValue, int page, int pageSize) {
         int offset = (int) Math.ceil(pageSize*(page-1));
         String materialType = "%"+searchValue+"%";
         return materialMapper.queryMaterialByType(materialType,pageSize,offset);

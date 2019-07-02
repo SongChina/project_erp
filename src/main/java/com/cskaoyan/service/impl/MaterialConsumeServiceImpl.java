@@ -1,10 +1,9 @@
-package com.cskaoyan.service.material.material_impl;
+package com.cskaoyan.service.impl;
 
 import com.cskaoyan.bean.MaterialConsume;
-import com.cskaoyan.bean.MaterialConsumeExample;
-import com.cskaoyan.bean.Work;
+import com.cskaoyan.bean.MaterialConsume2;
 import com.cskaoyan.mapper.MaterialConsumeMapper;
-import com.cskaoyan.service.material.MaterialConsumeService;
+import com.cskaoyan.service.MaterialConsumeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,7 +23,7 @@ public class MaterialConsumeServiceImpl implements MaterialConsumeService {
 
 
     @Override
-    public int insert(MaterialConsume materialConsume) {
+    public int insert(MaterialConsume2 materialConsume) {
         int i = materialConsumeMapper.insertSelective(materialConsume);
         return i;
     }
@@ -36,7 +35,7 @@ public class MaterialConsumeServiceImpl implements MaterialConsumeService {
     }
 
     @Override
-    public int updateConsume(MaterialConsume materialConsume) {
+    public int updateConsume(MaterialConsume2 materialConsume) {
         int update = materialConsumeMapper.update(materialConsume);
         return update;
     }

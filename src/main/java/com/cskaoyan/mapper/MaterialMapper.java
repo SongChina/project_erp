@@ -2,8 +2,9 @@ package com.cskaoyan.mapper;
 
 import com.cskaoyan.bean.Material;
 import com.cskaoyan.bean.MaterialExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface MaterialMapper {
     long countByExample(MaterialExample example);
