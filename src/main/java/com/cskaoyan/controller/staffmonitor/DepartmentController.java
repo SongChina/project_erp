@@ -1,4 +1,4 @@
-package com.cskaoyan.controller;
+package com.cskaoyan.controller.staffmonitor;
 
 import com.cskaoyan.bean.Department;
 import com.cskaoyan.bean.DepartmentList;
